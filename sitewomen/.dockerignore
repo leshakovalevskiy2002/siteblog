@@ -1,0 +1,12 @@
+.idea
+cert.*
+celerybeat-schedule.*
+Dockerfile*
+media/*
+!media/photos/placeholder300.jpg
+!media/profile/anonim.png
+.dockerignore
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd

@@ -1,0 +1,110 @@
+[
+{
+  "model": "women.husband",
+  "pk": 1,
+  "fields": {
+    "name": "Брэд Питт",
+    "age": 61,
+    "m_count": 2
+  }
+},
+{
+  "model": "women.husband",
+  "pk": 2,
+  "fields": {
+    "name": "Адам Шульман",
+    "age": 44,
+    "m_count": 1
+  }
+},
+{
+  "model": "women.husband",
+  "pk": 3,
+  "fields": {
+    "name": "Дэниэл Модер",
+    "age": 56,
+    "m_count": 2
+  }
+},
+{
+  "model": "women.husband",
+  "pk": 4,
+  "fields": {
+    "name": "Александр Поверин",
+    "age": 27,
+    "m_count": 0
+  }
+},
+{
+  "model": "women.husband",
+  "pk": 5,
+  "fields": {
+    "name": "Владимир Абашкин",
+    "age": 59,
+    "m_count": 1
+  }
+},
+{
+  "model": "women.husband",
+  "pk": 6,
+  "fields": {
+    "name": "Уле-Эйнар Бьёрндален",
+    "age": 51,
+    "m_count": 2
+  }
+},
+{
+  "model": "women.husband",
+  "pk": 7,
+  "fields": {
+    "name": "Билли Маккиг",
+    "age": 37,
+    "m_count": 0
+  }
+},
+{
+  "model": "women.husband",
+  "pk": 8,
+  "fields": {
+    "name": "Алишер Моргенштерн",
+    "age": 27,
+    "m_count": 0
+  }
+},
+{
+  "model": "women.husband",
+  "pk": 9,
+  "fields": {
+    "name": "Итан Хоук",
+    "age": 54,
+    "m_count": 2
+  }
+},
+{
+  "model": "women.husband",
+  "pk": 10,
+  "fields": {
+    "name": "Александр Лукашенко",
+    "age": 70,
+    "m_count": 1
+  }
+},
+{
+  "model": "women.husband",
+  "pk": 11,
+  "fields": {
+    "name": "Нил Мюррей",
+    "age": 53,
+    "m_count": 1
+  }
+},
+{
+  "model": "women.husband",
+  "pk": 12,
+  "fields": {
+    "name": "Далтон Гомес",
+    "age": 29,
+    "m_count": 1
+  }
+}
+]

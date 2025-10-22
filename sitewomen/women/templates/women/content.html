@@ -1,0 +1,110 @@
+{% load women_tags %}
+{% load static %}
+{% load i18n %}
+
+<div class="container-fluid">
+{% include 'include/messages.html' %}
+
+{% include 'women/search/form_search.html' with param=param route_name=route_name %}
+{% if query %}
+	<h2>{% blocktrans %}Posts for your query "{{ query }}"{% endblocktrans %}</h2>
+    <h4>
+		{% with posts.count as total_results %}
+			{% blocktrans count total_results=total_results %}
+				Found {{ total_results }} result
+			{% plural %}
+				Found {{ total_results }} results
+			{% endblocktrans %}
+		{% endwith %}
+	</h4>
+{% endif %}
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+	{% for p in posts %}
+    	<div class="col">
+    		<div class="card h-100 shadow-sm">
+        		<div class="card-header bg-light">
+        			<div class="d-flex justify-content-between align-items-center small">
+          				<span>{% trans "Category" %}: {{ p.cat }}</span>
+          				<span>{{ p.time_update|date:"d.m.Y H:i:s" }}</span>
+        			</div>
+					<div class="text-muted small mt-1">
+						{% trans "Author" %}: {{ p.author.username|default:_("unknown") }}
+					</div>
+      			</div>
+
+      			<div class="card-body">
+        			<h5 class="card-title">{{ p.title }}</h5>
+
+					<div class="mb-3 text-center">
+						<img src="{{ p.thumbnail.url }}"
+							 class="img-fluid rounded"
+							 alt="{{ p.title }}"
+							 style="max-height: 200px; object-fit: cover;">
+					</div>
+
+        			<div class="card-text">
+						{{ p.content|escape|truncatewords:30 }}
+        			</div>
+      			</div>
+
+      			<div class="card-footer bg-white border-0 py-3">
+        			<div class="d-flex justify-content-between align-items-center">
+          				<div>
+            				<a href="{{ p.get_absolute_url }}" class="btn btn-sm btn-outline-primary">
+              					{% trans "Read post" %}
+            				</a>
+							{% if p.author == request.user or request.user.is_superuser %}
+							<a href="{% url 'edit_post' p.slug %}" class="btn btn-sm btn-outline-success">
+              					{% trans "Edit post" %}
+            				</a>
+							{% endif %}
+							{% if p.author == request.user or request.user.is_superuser %}
+							<a href="{% url 'delete_post' p.slug %}" class="btn btn-sm btn-outline-danger">
+              					{% trans "Delete post" %}
+            				</a>
+							{% endif %}
+          				</div>
+					</div>
+					{% show_users_rating p ip %}
+      			</div>
+				{% if p.tags.exists %}
+					<div class="card-footer border-0">
+						{% trans "Post tags" %}:
+						{% for tag in p.tags.all %}
+							<a href="{% url 'tag' tag.slug %}">{{ tag }}</a>{% if not forloop.last %},{% endif %}
+						{% endfor %}
+					</div>
+				{% endif %}
+    		</div>
+  		</div>
+    {% empty %}
+		<div class="col-12">
+    		<div class="alert alert-info text-center">
+      			<p>{% trans "No results for your query. Return to" %}
+        		{% if param %}
+          			<a href=""
+                       hx-get="{% url route_name param %}"
+                       hx-target="#content"
+                       hx-swap="innerHTML"
+                       class="alert-link">
+        		{% else %}
+          			<a href=""
+                       hx-get="{% url route_name %}"
+                       hx-target="#content"
+                       hx-swap="innerHTML"
+                       class="alert-link">
+        		{% endif %}{% trans "viewing articles" %}</a></p>
+    		</div>
+  		</div>
+  	{% endfor %}
+</div>
+<script src="{% static 'ratings.js' %}"></script>
+{% block script %}{% endblock %}
+</div>
+
+<div class="container-fluid">
+  {% block navigation %}
+    {% include 'women/pagination.html' %}
+  {% endblock %}
+</div>

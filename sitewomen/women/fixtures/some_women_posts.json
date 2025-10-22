@@ -1,0 +1,33 @@
+[
+{
+  "model": "women.women",
+  "pk": 1,
+  "fields": {
+    "title": "Анджелина Джоли",
+    "slug": "andzhelina-dzholi",
+    "time_create": "2025-04-24T13:12:13.568Z",
+    "time_update": "2025-08-06T19:07:04.419Z",
+    "cat": 1
+  }
+},
+{
+  "model": "women.women",
+  "pk": 2,
+  "fields": {
+    "title": "Энн Хэтэуей",
+    "slug": "enn-kheteuei",
+    "time_create": "2025-04-24T13:12:13.568Z",
+    "time_update": "2025-08-06T19:07:04.419Z",
+    "cat": 23}
+},
+{
+  "model": "women.women",
+  "pk": 3,
+  "fields": {
+    "title": "Джулия Робертс",
+    "slug": "dzuliya-roberts",
+    "time_create": "2025-04-24T13:12:13.568Z",
+    "time_update": "2025-08-06T19:07:04.419Z",
+    "cat": 9}
+}
+]

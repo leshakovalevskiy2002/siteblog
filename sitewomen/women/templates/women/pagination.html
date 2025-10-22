@@ -1,0 +1,49 @@
+{% load i18n %}
+
+<nav class="m-5">
+	<ul class="pagination justify-content-center">
+		{% if is_paginated %}
+			{% if page_obj.has_previous %}
+				<li class="page-item">
+					<a class="page-link"
+                       href=""
+                       hx-get="?page={{ page_obj.previous_page_number }}{% if query %}&query={{ query }}{% endif %}"
+                       hx-target="#content"
+                       hx-swap="innerHTML">
+                    {% trans "Previous" %}</a>
+				</li>
+			{% endif %}
+
+			{% for p in elided_page_range %}
+				{% if page_obj.number == p or p == paginator.ELLIPSIS %}
+					<li class="page-item active">
+						<span class="page-link">
+							{{ p }}
+						</span>
+					</li>
+				{% else %}
+					<li class="page-item">
+						<a class="page-link"
+                           href=""
+                           hx-get="?page={{ p }}{% if query %}&query={{ query }}{% endif %}"
+                           hx-target="#content"
+                           hx-swap="innerHTML">
+                        {{ p }}</a>
+					</li>
+				{% endif %}
+        	{% endfor %}
+
+			{% if page_obj.has_next %}
+				<li class="page-item">
+					<a class="page-link"
+                       href=""
+                       hx-get="?page={{ page_obj.next_page_number }}{% if query %}&query={{ query }}{% endif %}"
+                       hx-target="#content"
+                       hx-swap="innerHTML">
+                    {% trans "Next" %}</a>
+				</li>
+			{% endif %}
+
+		{% endif %}
+    </ul>
+</nav>

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load i18n %}
+ 
+{% block content %}
+<h1>{% trans "Profile" %}</h1>
+
+<img class="rounded" src="{{ user.thumbnail.url }}" alt="">
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.media }}
+    <div class="invalid-feedback">
+        {% for error in form.non_field_errors %}
+            <p>{{ error }}</p>
+        {% endfor %}
+    </div>
+    {% for f in form %}
+        {% if f.name == 'date_birth' %}
+            {% include 'include/date_field.html' %}
+        {% elif f.name == 'photo' %}
+            {% include 'include/file_input.html' with field=f %}
+        {% else %}
+            <div class="mb-3 row">
+                <label class="col-sm-2 col-form-label form-check-label" for="{{ f.id_for_label }}">{{ f.label_tag }}</label>
+                {{ f }}
+                <div class="invalid-feedback">
+                    {% for error in f.errors %}
+                        <p class="mb-0">{{ error }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+
+    {% endfor %}
+    <button class="btn btn-success" type="submit">{% trans "Save" %}</button>
+</form>
+
+{% if perms.users.change_psw_perm %}
+<hr>
+<p ><a href="{% url 'users:password_change' %}">{% trans "Change password" %}</a></p>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,385 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-12 22:51+0300\n"
+"PO-Revision-Date: 2025-10-10 22:03+0300\n"
+"Last-Translator: lelya1 Kovalevskiy <lelya.kovalevskiy@list.ru>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Translated-Using: django-rosetta 0.9.9\n"
+
+#: .\users\admin.py:17 .\users\forms.py:70 .\users\models.py:30
+msgid "Date of birth"
+msgstr "Дата нараджэння"
+
+#: .\users\admin.py:22
+msgid "Photo"
+msgstr "Фота"
+
+#: .\users\admin.py:25
+msgid "User photo"
+msgstr "Фота карыстальніка"
+
+#: .\users\admin.py:26
+msgid "Default photo"
+msgstr "Фота па змаўчанні"
+
+#: .\users\apps.py:7
+msgid "Users"
+msgstr "Карыстальнікі"
+
+#: .\users\forms.py:16
+msgid "Username or E-mail"
+msgstr "Лагін або E-mail"
+
+#: .\users\forms.py:17 .\users\forms.py:35
+msgid "Password"
+msgstr "Пароль"
+
+#: .\users\forms.py:18
+msgid "Remember me"
+msgstr "Запомніць мяне"
+
+#: .\users\forms.py:29
+msgid "Please verify your email to log in"
+msgstr "Каб увайсці праз email, пацвердзіце пошту"
+
+#: .\users\forms.py:36
+msgid "Repeat password"
+msgstr "Паўтарыце пароль"
+
+#: .\users\forms.py:42 .\users\forms.py:67
+msgid "Username"
+msgstr "Лагін"
+
+#: .\users\forms.py:43 .\users\forms.py:68
+msgid "E-mail"
+msgstr "E-mail"
+
+#: .\users\forms.py:58
+#, python-format
+msgid ""
+"E-mail address %(email)s has already been used to create an account. If this "
+"account belongs to you but you forgot the password, <a href='%(url)s'>try to "
+"reset it here</a>."
+msgstr ""
+"Адрас электроннай пошты %(email)s ужо быў выкарыстаны для стварэння "
+"ўліковага запісу. Калі гэты ўліковы запіс належыць вам, але вы забылі "
+"пароль, <a href='%(url)s'>паспрабуйце яго аднавіць тут</a>."
+
+#: .\users\forms.py:85
+msgid "Old password"
+msgstr "Стары пароль"
+
+#: .\users\forms.py:87 .\users\forms.py:99
+msgid "New password"
+msgstr "Новы пароль"
+
+#: .\users\forms.py:89
+msgid "Confirm password"
+msgstr "Пацвердзіце пароль"
+
+#: .\users\forms.py:94
+msgid "E-mail address"
+msgstr "Адрас электроннай пошты"
+
+#: .\users\forms.py:101
+msgid "Confirm new password"
+msgstr "Пацвердзіце новы пароль"
+
+#: .\users\models.py:28
+msgid "Profile picture"
+msgstr "Фота профілю"
+
+#: .\users\models.py:37
+msgid "Description"
+msgstr "Апісанне"
+
+#: .\users\models.py:39
+msgid "URL"
+msgstr "URL"
+
+#: .\users\tasks.py:14
+msgid "Confirm your email"
+msgstr "Пацвердзіце ваш email"
+
+#: .\users\tasks.py:15
+#, python-format
+msgid "To confirm your email, please follow this link: %(link)s"
+msgstr "Каб пацвердзіць email, перайдзіце па спасылцы: %(link)s"
+
+#: .\users\templates\users\confirm_email.html:6
+msgid ""
+"To confirm your registration, follow the link in the email sent to your "
+"address."
+msgstr ""
+"Каб пацвердзіць рэгістрацыю, перайдзіце па спасылцы з ліста, адпраўленага на "
+"ўказаны e-mail адрас."
+
+#: .\users\templates\users\login.html:28
+#: .\users\templates\users\registration.html:29
+msgid "Login"
+msgstr "Увайсці"
+
+#: .\users\templates\users\login.html:32
+#: .\users\templates\users\registration.html:25
+msgid "Register"
+msgstr "Рэгістрацыя"
+
+#: .\users\templates\users\login.html:33
+msgid "Forgot password?"
+msgstr "Забылі пароль?"
+
+#: .\users\templates\users\password_change.html:27
+#: .\users\templates\users\password_reset_confirm.html:25
+msgid "Confirm"
+msgstr "Пацвердзіць"
+
+#: .\users\templates\users\password_change_done.html:13
+msgid "Return to profile editing page"
+msgstr "Вярнуцца на старонку рэдагавання профілю"
+
+#: .\users\templates\users\password_reset_complete.html:7
+msgid "Your password has been set. You may go ahead and log in now."
+msgstr "Ваш пароль быў паспяхова зменены. Цяпер вы можаце ўвайсці ў сістэму."
+
+#: .\users\templates\users\password_reset_complete.html:8
+msgid "Log in"
+msgstr "Увайсці"
+
+#: .\users\templates\users\password_reset_confirm.html:6
+#: .\users\templates\users\profile.html:40
+msgid "Change password"
+msgstr "Памяняць пароль"
+
+#: .\users\templates\users\password_reset_confirm.html:28
+msgid ""
+"The password reset link is invalid, possibly because it has already been "
+"used."
+msgstr ""
+"Спасылка для скіду пароля несапраўдная, магчыма, яна ўжо была выкарыстана."
+
+#: .\users\templates\users\password_reset_confirm.html:29
+msgid "Please request a new password reset."
+msgstr "Калі ласка, запытайце новы скід пароля."
+
+#: .\users\templates\users\password_reset_done.html:6
+msgid ""
+"We’ve emailed you instructions for setting your password, if an account "
+"exists with the email you entered. You should receive them shortly."
+msgstr ""
+"Мы адправілі вам інструкцыі па ўсталяванні новага пароля, калі ўліковы запіс "
+"з указаным email існуе. Вы павінны атрымаць ліст у бліжэйшы час."
+
+#: .\users\templates\users\password_reset_done.html:7
+msgid ""
+"If you don’t receive an email, please make sure you’ve entered the address "
+"you registered with, and check your spam folder."
+msgstr ""
+"Калі вы не атрымалі ліст, пераканайцеся, што ўказалі адрас, выкарыстаны пры "
+"рэгістрацыі, і праверце папку «Спам»."
+
+#: .\users\templates\users\password_reset_email.html:2
+#, python-format
+msgid ""
+"You're receiving this email because you requested a password reset for your "
+"user account at %(site_name)s."
+msgstr ""
+"Вы атрымалі гэты ліст, таму што запыталі скід пароля для сваёй уліковай "
+"запісу на сайце %(site_name)s."
+
+#: .\users\templates\users\password_reset_email.html:4
+msgid "Please go to the following page and choose a new password:"
+msgstr "Калі ласка, перайдзіце па наступнай спасылцы і абярыце новы пароль:"
+
+#: .\users\templates\users\password_reset_email.html:8
+msgid "Your username, in case you’ve forgotten:"
+msgstr "Ваш лагін, калі вы яго забылі:"
+
+#: .\users\templates\users\password_reset_email.html:10
+msgid "Thanks for using our site!"
+msgstr "Дзякуй за выкарыстанне нашага сайта!"
+
+#: .\users\templates\users\password_reset_email.html:12
+#, python-format
+msgid "The %(site_name)s team"
+msgstr "Каманда сайта %(site_name)s"
+
+#: .\users\templates\users\password_reset_form.html:25
+msgid "Send"
+msgstr "Адправіць"
+
+#: .\users\templates\users\profile.html:5
+msgid "Profile"
+msgstr "Профіль"
+
+#: .\users\templates\users\profile.html:35
+msgid "Save"
+msgstr "Захаваць"
+
+#: .\users\templates\users\registration.html:28
+msgid "Already have an account?"
+msgstr "Ужо ёсць акаўнт?"
+
+#: .\users\templates\users\registration_done.html:5
+msgid "Welcome!"
+msgstr "Сардэчна запрашаем!"
+
+#: .\users\templates\users\registration_done.html:7
+msgid ""
+"You have successfully registered on the site! To log in, please use this"
+msgstr ""
+"Вы паспяхова зарэгістраваліся на сайце! Каб увайсці ў сістэму, скарыстайцеся "
+"гэтай"
+
+#: .\users\templates\users\registration_done.html:8
+msgid "link"
+msgstr "спасылкай"
+
+#: .\users\templates\users\show_profile.html:7
+msgid "Your profile"
+msgstr "Ваш профіль"
+
+#: .\users\templates\users\show_profile.html:9
+#, python-format
+msgid "User profile %(username)s"
+msgstr "Профіль карыстальніка %(username)s"
+
+#: .\users\templates\users\show_profile.html:15
+msgid "User avatar"
+msgstr "Аватар карыстальніка"
+
+#: .\users\templates\users\show_profile.html:19
+msgid "Full name:"
+msgstr "Імя і прозвішча:"
+
+#: .\users\templates\users\show_profile.html:20
+msgid "Email:"
+msgstr "Email:"
+
+#: .\users\templates\users\show_profile.html:21
+#: .\users\templates\users\show_profile.html:23
+msgid "Last login:"
+msgstr "Апошні ўваход:"
+
+#: .\users\templates\users\show_profile.html:21
+msgid "a long time ago"
+msgstr "даўно"
+
+#: .\users\templates\users\show_profile.html:22
+msgid "Status:"
+msgstr "Статус:"
+
+#: .\users\templates\users\show_profile.html:22
+msgid "Online"
+msgstr "Анлайн"
+
+#: .\users\templates\users\show_profile.html:24
+msgid "Date of birth:"
+msgstr "Дата нараджэння:"
+
+#: .\users\templates\users\show_profile.html:25
+msgid "About me:"
+msgstr "Пра сябе:"
+
+#: .\users\templates\users\show_profile.html:26
+msgid "Edit"
+msgstr "Рэдагаваць"
+
+#: .\users\urls.py:12
+msgid "login/"
+msgstr "увайсці/"
+
+#: .\users\urls.py:13
+msgid "logout/"
+msgstr "выйсці/"
+
+#: .\users\urls.py:15
+msgid "registration/"
+msgstr "рэгістрацыя/"
+
+#: .\users\urls.py:16
+msgid "registration/confirm_email/"
+msgstr "рэгістрацыя/пацвердзіць-пошту/"
+
+#: .\users\urls.py:17
+msgid "registration/verify_email/<uuid:token>/"
+msgstr "рэгістрацыя/праверка-пошты/<uuid:token>/"
+
+#: .\users\urls.py:18
+msgid "registration_done/"
+msgstr "рэгістрацыя_завершана/"
+
+#: .\users\urls.py:20
+msgid "profile/"
+msgstr "профіль/"
+
+#: .\users\urls.py:21
+msgid "show_profile/<slug:slug>/"
+msgstr "профіль/<slug:slug>/"
+
+#: .\users\urls.py:23
+msgid "password_change/"
+msgstr "змена_пароля/"
+
+#: .\users\urls.py:24
+msgid "password_change/done/"
+msgstr "змена_пароля/скончана/"
+
+#: .\users\urls.py:27
+msgid "password_reset/"
+msgstr "скінуць_пароль/"
+
+#: .\users\urls.py:28
+msgid "password_reset/done/"
+msgstr "скінуць_пароль/скончана/"
+
+#: .\users\urls.py:30
+msgid "password_reset/<uidb64>/<token>/"
+msgstr "скінуць_пароль/<uidb64>/<token>/"
+
+#: .\users\urls.py:32
+msgid "password_reset/complete/"
+msgstr "скінуць_пароль/завершана/"
+
+#: .\users\views.py:23
+msgid "Authorization"
+msgstr "Аўтарызацыя"
+
+#: .\users\views.py:26
+msgid "Welcome to the site!"
+msgstr "Сардэчна запрашаем на сайт!"
+
+#: .\users\views.py:52
+msgid "Registration"
+msgstr "Рэгістрацыя"
+
+#: .\users\views.py:75
+msgid "User is already verified"
+msgstr "Карыстальнік ужо пацверджаны"
+
+#: .\users\views.py:93
+msgid "User profile"
+msgstr "Ваш профіль"
+
+#: .\users\views.py:110
+msgid "Password has been successfully changed"
+msgstr "Пароль быў паспяхова зменены"
+
+#: .\users\views.py:138
+#, python-format
+msgid "User profile - %(username)s"
+msgstr "Профіль карыстальніка - %(username)s"

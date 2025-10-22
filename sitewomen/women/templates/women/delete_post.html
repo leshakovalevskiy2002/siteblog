@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block content %}
+<h1>{{ title }}</h1>
+<p>
+    {% blocktrans with post_title=post.title %}
+        Are you sure you want to delete the post "{{ post_title }}"?
+    {% endblocktrans %}
+</p>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">{% trans "Yes, delete" %}</button>
+    <a href="{{ post.get_absolute_url }}" class="btn btn-success">{% trans "Return to post" %}</a>
+</form>
+{% endblock %}

@@ -1,0 +1,132 @@
+{% load static %}
+{% load i18n %}
+{% load women_tags %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}{{title}}{% endblock title %}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="shortcut icon" href="{% static 'women/images/main.ico' %}" type="image/x-icon"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{% load django_bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+	<link type="text/css" href="{% static 'women/css/styles.css' %}" rel="stylesheet" />
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+	{% block mainmenu %}
+	<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #3f4137;">
+	   <div class="container-fluid">
+		  <a class="navbar-brand" href="{% url 'home' %}">
+			  <img class="rounded-circle" width="50" src="{% static 'women/images/main.ico' %}"/>
+		  </a>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarBasic" aria-controls="navbarBasic" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse show" id="navbarBasic">
+			  	  <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+				  {% for m in mainmenu %}
+			          {% if not forloop.last %}
+	                          {% if m.url_name == "add_page" %}
+							      {% if perms.women.add_women %}
+								      <li class="nav-item">
+										  <a class="nav-link text-decoration-none text-warning fs-5 p-3"
+											 href="{% url m.url_name %}">{{m.title}}</a>
+									  </li>
+								  {% endif %}
+							  {% else %}
+							      <li class="nav-item">
+								  	  <a class="nav-link active text-decoration-none text-warning fs-5 p-3"
+										 href="{% url m.url_name %}">{{ m.title }}
+									  </a>
+							   	  </li>
+							  {% endif %}
+				  	  {% else %}
+				  </ul>
+			          <ul class="navbar-nav mb-2 mb-xl-0">
+                      {% if request.user.is_authenticated %}
+						  <form class="d-flex" method="GET" action="{% url 'home' %}">
+							  <input class="form-control me-2" type="search" placeholder="{% trans 'Search...' %}" aria-label="Search" name="query">
+							  <button class="btn btn-outline-success" type="submit">{% trans 'Search' %}</button>
+						  </form>
+                          <li class="nav-item float-right">
+							  <a class="nav-link text-decoration-none text-warning fs-5" href="{{ request.user.get_absolute_url }}">
+								  	<img class="rounded-circle" width="30" src="{{ request.user.thumbnail.url }}">
+								  {{ request.user.username }}
+							  {% if request.user.is_online %}
+							  <img class="mt-2" width="10" src="{% static 'users/button.png' %}" alt="online">
+							  {% endif %}</a>
+						  </li>
+							<li class="nav-item float-right">
+								<form action="{% url m.url_name %}" method="post">{% csrf_token %}
+									<a href="#" class="nav-link text-decoration-none text-warning fs-5"
+									   onclick="parentNode.submit();">{{ m.title }}</a>
+								</form>
+							</li>
+						{% else %}
+						  <li class="nav-item float-right">
+							  <a class="nav-link text-decoration-none text-warning fs-5" href="{% url m.url_name %}">{{ m.title }}</a>
+						  </li>
+						  <li class="nav-item float-right">
+							  <a class="nav-link text-decoration-none text-warning fs-5" href="{% url m.url_name2 %}">{{ m.title2 }}</a>
+						  </li>
+						{% endif %}
+                	</ul>
+				      {% endif %}
+				{% endfor %}
+		  </div>
+	   </div>
+	</nav>
+	{% endblock mainmenu %}
+
+	<div class="wrapper">
+		<div class="container-fluid">
+			<div class="row">
+				{% block sidebar %}
+					{% include 'sidebar.html' %}
+				{% endblock sidebar %}
+				<div class="col-sm-10">
+					<div class="d-flex justify-content-between">
+					{% block breadcrumbs %}
+						{% include 'include/breadcrumbs.html' %}
+					{% endblock breadcrumbs %}
+						<div class="language-switcher">
+							<div class="language-buttons">
+								{% get_available_languages as LANGUAGES %}
+								{% get_language_info_list for LANGUAGES as languages %}
+								{% for language in languages %}
+								<a href="{% change_language_url request language.code %}"
+								   class="language-btn"><span class="language-text">{{language.name_local|title}}</span>
+								</a>
+								{% endfor %}
+							</div>
+						</div>
+
+						</div>
+					{% block main_area %}
+						<div class="container-fluid">
+							{% include 'include/messages.html' %}
+							{% block content %}
+							{% endblock content %}
+						</div>
+						<div class="container-fluid">
+							{% block navigation %}
+							{% endblock %}
+						</div>
+					{% endblock %}
+				</div>
+			</div>
+		</div>
+	<footer class="text-center">
+		{% include 'women/includes/nav.html' %}
+		<div class="text-center p-3" style="background-color: #3f4137; color:white;">
+    © 2025 {% trans "Partial or full reproduction of content from this site for distribution on other platforms, including print, is strictly prohibited." %}
+</div>
+	</footer>
+		</div>
+	<script src="{% static 'backend.js' %}"></script>
+	{% block script %}{% endblock %}
+<script src="https://unpkg.com/htmx.org@1.9.4"></script>
+</body>
+</html>

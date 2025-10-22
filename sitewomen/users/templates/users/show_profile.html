@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+    {% if request.user == user %}
+        <h1 class="mb-0">{% trans "Your profile" %}</h1>
+    {% else %}
+        <h1 class="mb-0">{% blocktrans with username=user %}User profile {{ username }}{% endblocktrans %}</h1>
+    {% endif %}
+<div class="card border-0">
+        <div class="card-body">
+        <div class="row">
+            <div class="col-3">
+                <img class="rounded-circle float-end" src="{{ user.thumbnail.url }}" alt="{% trans 'User avatar' %}">
+            </div>
+            <div class="col-9 px-0">
+                <h4 class="mx-0">{{ user.username }}</h4>
+                {% if user.get_full_name %}<p class="ms-3 mb-0"><b>{% trans "Full name:" %}</b> {{ user.get_full_name|title }}</p>{% endif %}
+                <p class="ms-3 mb-0"><b>{% trans "Email:" %}</b> {{ user.email }}</p>
+                {% if user.last_login is None %}<p class="ms-3 mb-0"><b>{% trans "Last login:" %}</b> {% trans "a long time ago" %}</p>{% else %}
+                {% if user.is_online %}<p class="ms-3 mb-0"><b>{% trans "Status:" %} </b>{% trans "Online" %}</p>{% else %}
+                    <p class="ms-3 mb-0"><b>{% trans "Last login:" %}</b> {{ user.last_login }}</p>{% endif %}{% endif %}
+                {% if user.date_birth %}<p class="ms-3 mb-0"><b>{% trans "Date of birth:" %}</b> {{ user.date_birth }}</p>{% endif %}
+                {% if user.description %}<div class="ms-3 mb-0"><b>{% trans "About me:" %}</b> {{ user.description|safe }}</div>{% endif %}
+                {% if user == request.user %}<a class="text-decoration-none btn btn-primary ms-3 mt-2" href="{% url 'users:profile' %}">{% trans "Edit" %}</a>{% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,98 @@
+[
+{
+  "model": "women.tagpost",
+  "pk": 1,
+  "fields": {
+    "tag": "Блондинки",
+    "slug": "blondinki"
+  }
+},
+{
+  "model": "women.tagpost",
+  "pk": 2,
+  "fields": {
+    "tag": "Брюнетки",
+    "slug": "bryunetki"
+  }
+},
+{
+  "model": "women.tagpost",
+  "pk": 3,
+  "fields": {
+    "tag": "Оскар",
+    "slug": "oskar"
+  }
+},
+{
+  "model": "women.tagpost",
+  "pk": 4,
+  "fields": {
+    "tag": "Олимпиада",
+    "slug": "olimpiada"
+  }
+},
+{
+  "model": "women.tagpost",
+  "pk": 5,
+  "fields": {
+    "tag": "Высокие",
+    "slug": "visokie"
+  }
+},
+{
+  "model": "women.tagpost",
+  "pk": 6,
+  "fields": {
+    "tag": "Средние",
+    "slug": "srednie"
+  }
+},
+{
+  "model": "women.tagpost",
+  "pk": 7,
+  "fields": {
+    "tag": "Низкие",
+    "slug": "niskie"
+  }
+},
+{
+  "model": "women.tagpost",
+  "pk": 8,
+  "fields": {
+    "tag": "Нобель",
+    "slug": "nobel"
+  }
+},
+{
+  "model": "women.tagpost",
+  "pk": 9,
+  "fields": {
+    "tag": "Красотки",
+    "slug": "krasotki"
+  }
+},
+{
+  "model": "women.tagpost",
+  "pk": 10,
+  "fields": {
+    "tag": "Сильные",
+    "slug": "silnye"
+  }
+},
+{
+  "model": "women.tagpost",
+  "pk": 11,
+  "fields": {
+    "tag": "Рыжие",
+    "slug": "ryzie"
+  }
+},
+{
+  "model": "women.tagpost",
+  "pk": 12,
+  "fields": {
+    "tag": "Блогинг",
+    "slug": "bloging"
+  }
+}
+]

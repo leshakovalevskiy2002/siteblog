@@ -1,0 +1,12 @@
+{% load i18n %}
+
+<div class="m-3">
+    {% if tags %}
+        <p class="fs-5">{% trans "Tags" %}: </p>
+        {% for tag in tags %}
+        <span class="badge bg-secondary">
+            <a class="text-white text-decoration-none fs-7" href="{{ tag.get_absolute_url }}">{{ tag }}</a>
+        </span>
+        {% endfor %}
+    {% endif %}
+</div>

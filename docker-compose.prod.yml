@@ -1,0 +1,95 @@
+name: sitewomen-prod
+
+services:
+  web:
+    build:
+      context: ./sitewomen
+      dockerfile: Dockerfile.prod
+    container_name: web
+    image: web
+    command: gunicorn sitewomen.wsgi:application --bind 0.0.0.0:8000
+    env_file:
+      - .env.prod
+    volumes:
+      - static-data:/home/app/web/static
+      - media-data:/home/app/web/media
+    depends_on:
+      - db
+      - memcached
+      - redis
+
+  asgiserver:
+    build:
+      context: ./sitewomen
+      dockerfile: Dockerfile.prod
+    container_name: asgiserver
+    image: asgiserver
+    command: daphne sitewomen.asgi:application -b 0.0.0.0 -p 9000
+    env_file:
+      - .env.prod
+    depends_on:
+      - db
+
+  db:
+    image: postgres:17
+    container_name: db
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    env_file:
+      - .env.prod
+    environment:
+      - POSTGRES_USER=${SQL_USER}
+      - POSTGRES_PASSWORD=${SQL_PASSWORD}
+      - POSTGRES_DB=${SQL_DATABASE}
+
+  memcached:
+    image: memcached:1.6.21
+    container_name: memcached
+
+  redis:
+    image: redis:8.0.4
+    container_name: redis
+    volumes:
+      - redis_data:/data
+
+  celery:
+    build:
+      context: ./sitewomen
+      dockerfile: Dockerfile.prod
+    container_name: celery
+    image: celery
+    command: celery -A sitewomen worker --loglevel=info
+    env_file:
+      - .env.prod
+    depends_on:
+      - redis
+
+  celerybeat:
+    build:
+      context: ./sitewomen
+      dockerfile: Dockerfile.prod
+    container_name: celery-beat
+    image: celery-beat
+    command: celery -A sitewomen beat --loglevel=info
+    env_file:
+      - .env.prod
+    depends_on:
+      - redis
+
+  nginx:
+    build: ./nginx
+    container_name: nginx
+    image: nginx
+    ports:
+      - 80:80
+    depends_on:
+      - web
+    volumes:
+      - static-data:/home/app/web/static
+      - media-data:/home/app/web/media
+
+volumes:
+  postgres-data:
+  redis_data:
+  static-data:
+  media-data:

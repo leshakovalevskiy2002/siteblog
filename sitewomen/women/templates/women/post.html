@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load women_tags %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="alert alert-light border" role="alert">
+            <div class="d-flex align-items-center">
+                <i class="bi bi-eye me-2"></i>
+                <span>
+                {% get_page_count_views post.slug as page_count %}
+                {% blocktrans count page_count=page_count %}
+                    Today the page was visited <span class="badge bg-primary">{{ page_count }}</span> time
+                {% plural %}
+                    Today the page was visited <span class="badge bg-primary">{{ page_count }}</span> times
+                {% endblocktrans %}
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% with post.tags.all as tags %}
+{% if tags %}
+    {% trans "Tags" %}:
+    {% for tag in tags %}
+        <span class="badge text-bg-info">
+            <a class="fs-6" href="{{ tag.get_absolute_url }}" style="color: white; text-decoration:none;">{{ tag }}</a>
+        </span>
+	{% endfor %}
+{% endif %}
+{% endwith %}
+
+<h1>{{post.title}}</h1>
+
+
+<div class="row">
+    <div class="col col-12">
+        <img class="float-start me-3 mb-3 rounded" src="{{ post.thumbnail.url }}">
+        {{ post.content|safe }}
+    </div>
+</div>
+{% show_users_rating post ip %}
+
+{% if request.user == post.author or request.user.is_superuser %}
+	<p class="btn btn-success mt-2"><a class="text-decoration-none text-light" href="{% url 'edit_post' post.slug %}">{% trans "Edit" %}</a></p>
+{% endif %}
+
+<h2>{% trans "Similar posts" %}</h2>
+{% for post in similar_posts %}
+    <p class="border-1">
+        <a class="text-decoration-none text-warning" href="{{ post.get_absolute_url }}">
+            <img width="30" src="{{ post.thumbnail.url }}" alt="{{ post.title }}"> {{ post.title }}
+        </a>
+    </p>
+{% empty %}
+    <span class="text-danger">{% trans "No similar posts." %}</span>
+{% endfor %}
+
+	{% with comments.count as total_comments %}
+        <h2 id="count-comments">
+            {% blocktrans count total=total_comments %}
+                {{ total }} comment
+            {% plural %}
+                {{ total }} comments
+            {% endblocktrans %}
+        </h2>
+    {% endwith %}
+
+    {% include 'women/post/comments_list.html' %}
+
+<script src="{% static 'ratings.js' %}"></script>
+{% block script %}{% endblock %}
+{% endblock %}

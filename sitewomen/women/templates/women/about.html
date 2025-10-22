@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load i18n cache %}
+
+{% block content %}
+{% get_current_language as LANGUAGE_CODE %}
+{% cache None about LANGUAGE_CODE %}
+<h1>{{ title }}</h1>
+
+<div class="container">
+  <div class="card shadow-sm border-0">
+    <div class="card-body bg-light rounded">
+      <p class="card-text fs-5 text-muted">
+        {% blocktranslate %}
+        This blog is a place where every voice matters.
+        Here, you can not only read engaging posts but also create your own, share your thoughts,
+        debate, like, dislike, and simply be yourself. We have a live chat for real-time conversations,
+        and posts are neatly organized by topics and tags. Join us — be an author, a reader, a conversationalist.
+        Everyone is welcome!
+        {% endblocktranslate %}
+      </p>
+    </div>
+  </div>
+</div>
+{% endcache %}
+{% endblock %}

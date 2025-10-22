@@ -1,0 +1,26 @@
+[
+{
+  "model": "users.user",
+  "pk": 33,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$LWXFsibwMmXslvVxrkDPoA$TtTExYFsLBXQXMgHmHx6yV+gEgksWh7Ze/ijRQnvuh4=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "test",
+    "first_name": "Алексей",
+    "last_name": "Ковалевский",
+    "email": "test@list.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-07-20T20:08:37.465Z",
+    "email_verified": true,
+    "verification_token": "9a0ddb96-d40e-4622-b00a-bfab540b5bdc",
+    "photo": "profile/anonim.png",
+    "date_birth": null,
+    "description": "",
+    "slug": "jonny",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]

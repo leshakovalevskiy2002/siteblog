@@ -1,0 +1,23 @@
+{% load static %}
+{% load i18n %}
+
+<div class="mb-1" style="max-height: 200px; overflow-y: auto; word-break: break-all;">
+    {% if reply %}
+        <span class="fw-bold">{{ comment.parent.author }}</span>,
+    {% endif %}
+    {{ comment.body }}
+</div>
+{% if comment.is_updated %}
+    <p class="text-secondary fw-light fst-italic">{% trans "Edited" %} {{ comment.updated|timesince }} {% trans "ago" %}</p>
+{% endif %}
+{% if request.user.is_authenticated %}
+  <a class="btn btn-light text-decoration-none btn-reply" href="#commentForm" data-comment-id="{{ comment.pk }}"
+     data-comment-username="{{ comment.author }}">
+      <img width="20" src="{% static 'women/images/reply.png' %}" alt="{% trans 'Reply' %}"> {% trans 'Reply' %}
+  </a>
+{% endif %}
+{% if request.user.username == comment.author.username %}
+  <a class="btn btn-light text-decoration-none text-dark" href="{% url 'edit_comment' comment.post.pk comment.pk %}">
+      <img width="20" src="{% static 'women/images/edit.png' %}" alt="{% trans 'Edit' %}">  {% trans 'Edit' %}
+  </a>
+{% endif %}

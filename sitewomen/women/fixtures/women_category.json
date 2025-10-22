@@ -1,0 +1,249 @@
+[
+{
+  "model": "women.category",
+  "pk": 1,
+  "fields": {
+    "name": "Актрисы",
+    "slug": "aktrisy",
+    "parent": null,
+    "lft": 1,
+    "rght": 12,
+    "tree_id": 1,
+    "level": 0
+  }
+},
+{
+  "model": "women.category",
+  "pk": 2,
+  "fields": {
+    "name": "Певицы",
+    "slug": "pevitsy",
+    "parent": null,
+    "lft": 1,
+    "rght": 12,
+    "tree_id": 4,
+    "level": 0
+  }
+},
+{
+  "model": "women.category",
+  "pk": 4,
+  "fields": {
+    "name": "Спортсменки",
+    "slug": "sportsmenki",
+    "parent": null,
+    "lft": 1,
+    "rght": 6,
+    "tree_id": 6,
+    "level": 0
+  }
+},
+{
+  "model": "women.category",
+  "pk": 5,
+  "fields": {
+    "name": "Писательницы",
+    "slug": "pisatelnitsy",
+    "parent": null,
+    "lft": 1,
+    "rght": 6,
+    "tree_id": 5,
+    "level": 0
+  }
+},
+{
+  "model": "women.category",
+  "pk": 6,
+  "fields": {
+    "name": "Ученые",
+    "slug": "uchenye",
+    "parent": null,
+    "lft": 1,
+    "rght": 4,
+    "tree_id": 7,
+    "level": 0
+  }
+},
+{
+  "model": "women.category",
+  "pk": 7,
+  "fields": {
+    "name": "Блоггеры",
+    "slug": "bloggery",
+    "parent": null,
+    "lft": 1,
+    "rght": 6,
+    "tree_id": 2,
+    "level": 0
+  }
+},
+{
+  "model": "women.category",
+  "pk": 8,
+  "fields": {
+    "name": "Комедия",
+    "slug": "komediia",
+    "parent": 1,
+    "lft": 8,
+    "rght": 9,
+    "tree_id": 1,
+    "level": 1
+  }
+},
+{
+  "model": "women.category",
+  "pk": 9,
+  "fields": {
+    "name": "Драма",
+    "slug": "drama",
+    "parent": 1,
+    "lft": 4,
+    "rght": 7,
+    "tree_id": 1,
+    "level": 1
+  }
+},
+{
+  "model": "women.category",
+  "pk": 10,
+  "fields": {
+    "name": "Фентези",
+    "slug": "fentezi",
+    "parent": 1,
+    "lft": 10,
+    "rght": 11,
+    "tree_id": 1,
+    "level": 1
+  }
+},
+{
+  "model": "women.category",
+  "pk": 11,
+  "fields": {
+    "name": "Поп",
+    "slug": "pop",
+    "parent": 2,
+    "lft": 4,
+    "rght": 5,
+    "tree_id": 4,
+    "level": 1
+  }
+},
+{
+  "model": "women.category",
+  "pk": 12,
+  "fields": {
+    "name": "Кантри",
+    "slug": "kantri",
+    "parent": 2,
+    "lft": 2,
+    "rght": 3,
+    "tree_id": 4,
+    "level": 1
+  }
+},
+{
+  "model": "women.category",
+  "pk": 13,
+  "fields": {
+    "name": "Театральные",
+    "slug": "teatralnye",
+    "parent": 2,
+    "lft": 6,
+    "rght": 11,
+    "tree_id": 4,
+    "level": 1
+  }
+},
+{
+  "model": "women.category",
+  "pk": 14,
+  "fields": {
+    "name": "Немецкая",
+    "slug": "nemetskaia",
+    "parent": 4,
+    "lft": 4,
+    "rght": 5,
+    "tree_id": 6,
+    "level": 1
+  }
+},
+{
+  "model": "women.category",
+  "pk": 15,
+  "fields": {
+    "name": "Белорусская",
+    "slug": "belorusskaia",
+    "parent": 4,
+    "lft": 2,
+    "rght": 3,
+    "tree_id": 6,
+    "level": 1
+  }
+},
+{
+  "model": "women.category",
+  "pk": 16,
+  "fields": {
+    "name": "Взрослое",
+    "slug": "vzrosloe",
+    "parent": 5,
+    "lft": 2,
+    "rght": 3,
+    "tree_id": 5,
+    "level": 1
+  }
+},
+{
+  "model": "women.category",
+  "pk": 17,
+  "fields": {
+    "name": "Детское",
+    "slug": "detskoe",
+    "parent": 5,
+    "lft": 4,
+    "rght": 5,
+    "tree_id": 5,
+    "level": 1
+  }
+},
+{
+  "model": "women.category",
+  "pk": 18,
+  "fields": {
+    "name": "Химик",
+    "slug": "khimik",
+    "parent": 6,
+    "lft": 2,
+    "rght": 3,
+    "tree_id": 7,
+    "level": 1
+  }
+},
+{
+  "model": "women.category",
+  "pk": 23,
+  "fields": {
+    "name": "Вокал",
+    "slug": "vokal",
+    "parent": 13,
+    "lft": 7,
+    "rght": 10,
+    "tree_id": 4,
+    "level": 2
+  }
+},
+{
+  "model": "women.category",
+  "pk": 24,
+  "fields": {
+    "name": "Влог",
+    "slug": "vlog",
+    "parent": 7,
+    "lft": 4,
+    "rght": 5,
+    "tree_id": 2,
+    "level": 1
+  }
+}
+]

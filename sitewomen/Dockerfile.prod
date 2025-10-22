@@ -1,0 +1,43 @@
+# Builder stage #
+FROM python:3.11-slim AS builder
+
+WORKDIR /usr/src/app
+
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    cmake \
+    python3-dev \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN pip install --upgrade pip setuptools wheel \
+    && pip install pybind11
+
+COPY requirements.txt .
+RUN pip wheel --no-cache-dir --no-deps --wheel-dir /usr/src/app/wheels -r requirements.txt
+
+# Final stage #
+FROM python:3.11-slim
+
+ENV HOME=/home/app
+ENV APP_HOME=/home/app/web
+
+RUN mkdir -p $APP_HOME \
+    && groupadd -r app \
+    && useradd -r -g app app \
+    && apt-get update && apt-get install -y libpq-dev postgresql-client\
+    && rm -rf /var/lib/apt/lists/*
+
+COPY --from=builder /usr/src/app/wheels /wheels
+RUN pip install --no-cache-dir /wheels/*
+
+WORKDIR $APP_HOME
+COPY . .
+RUN chown -R app:app .
+USER app
+
+RUN chmod +x entrypoint.prod.sh
+ENTRYPOINT ["./entrypoint.prod.sh"]

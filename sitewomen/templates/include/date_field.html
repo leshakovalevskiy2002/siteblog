@@ -1,0 +1,15 @@
+<div class="mb-3 row">
+    <label class="col-sm-2 col-form-label form-check-label" for="{{ f.id_for_label }}">{{ f.label_tag }}</label>
+    <div class="col col-3 px-0 mx-0">
+        <div class="d-flex">
+            {% for pole in f.subwidgets %}
+                {{ pole }}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="invalid-feedback">
+        {% for error in f.errors %}
+            {{ error }}
+        {% endfor %}
+    </div>
+</div>

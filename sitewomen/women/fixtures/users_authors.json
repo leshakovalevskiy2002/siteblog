@@ -1,0 +1,343 @@
+[
+{
+  "model": "users.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$TliId8ofyEIzCIJa5Visbq$HNEik8KFTfCiAGxTkyDSgEk70tEL2LIs9qBszxIVqFw=",
+    "last_login": "2025-09-10T18:38:09.116Z",
+    "is_superuser": true,
+    "username": "lelya",
+    "first_name": "lelya",
+    "last_name": "Kovalevskiy",
+    "email": "lelya1.kovalevskiy@list.ru",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-05-04T19:13:46.196Z",
+    "email_verified": true,
+    "verification_token": "d5bc41af-0833-4b96-ba4e-fa67c6eae357",
+    "photo": "profile/2025/07/20/133941837699377026_9aHXS0B.jpg",
+    "date_birth": "2002-05-24",
+    "description": "<p>Какой-то текст.&nbsp;<strong>Что-то</strong> обо мне...<img alt=\"crying\" src=\"http://127.0.0.1:8000/static/ckeditor/ckeditor/plugins/smiley/images/cry_smile.png\" style=\"height:23px; width:23px\" title=\"crying\" /></p>",
+    "slug": "lelya",
+    "groups": [],
+    "user_permissions": [
+      46
+    ]
+  }
+},
+{
+  "model": "users.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$TWFo2jJmuKzULO04gwspDi$Rb+srZhn4au/7ebUXWZ2j110oBhmgx/mWHgGXJpvlmc=",
+    "last_login": "2025-05-25T14:54:22.613Z",
+    "is_superuser": true,
+    "username": "lesha",
+    "first_name": "",
+    "last_name": "",
+    "email": "lesha@list.ru",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-05-24T08:51:43.689Z",
+    "email_verified": false,
+    "verification_token": "974e4f4c-f2c3-4fbf-ab6d-f5a301183eb3",
+    "photo": "profile/2025/05/31/mini.jpg",
+    "date_birth": "2007-11-13",
+    "description": "",
+    "slug": "lesha",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$n9xiziJ21xkIe0rcnMPtac$CRRcKrPyPQhy21J7PdCZjW8F+sqD39fjRxK/a9Ze+fs=",
+    "last_login": "2025-06-10T07:30:24.559Z",
+    "is_superuser": false,
+    "username": "root2",
+    "first_name": "New",
+    "last_name": "User",
+    "email": "root2@list.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-05-26T15:03:48Z",
+    "email_verified": true,
+    "verification_token": "974e4f4c-f2c3-4fbf-ab6d-f5a301183eb3",
+    "photo": "profile/2025/05/31/anime.jpg",
+    "date_birth": "2006-08-30",
+    "description": "",
+    "slug": "root2",
+    "groups": [
+      1
+    ],
+    "user_permissions": [
+      78
+    ]
+  }
+},
+{
+  "model": "users.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$rWX2AlAuC6ucRqCAlKRbDr$Xm5jHKcMO3MPafodmC+dqLShk64uHH91uxXDsyt5Gbg=",
+    "last_login": "2025-07-12T17:39:22.633Z",
+    "is_superuser": false,
+    "username": "tybic",
+    "first_name": "Дядя",
+    "last_name": "Джонсон",
+    "email": "lelya.kovalevskiy@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-05-31T13:32:32Z",
+    "email_verified": false,
+    "verification_token": "e8947259-5f77-46ba-aa1d-d208fb0d31ff",
+    "photo": "profile/2025/05/31/jons.jpg",
+    "date_birth": "1995-01-01",
+    "description": "",
+    "slug": "tybic",
+    "groups": [],
+    "user_permissions": [
+      78
+    ]
+  }
+},
+{
+  "model": "users.user",
+  "pk": 15,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$UM0SYNFWXJvzwr1S4bQUpm$SbK9v4hyFa8EuZLkKTOJvBnzqanYqFolS9gppgeeHBE=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Jonny2",
+    "first_name": "root",
+    "last_name": "tbrbtr",
+    "email": "vrv@root.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-07-12T17:29:11.765Z",
+    "email_verified": true,
+    "verification_token": "8678f8a9-213a-49cc-baf1-bf7c3459399f",
+    "photo": "profile/anonim.png",
+    "date_birth": null,
+    "description": "",
+    "slug": "jonny2",
+    "groups": [],
+    "user_permissions": [
+      78
+    ]
+  }
+},
+{
+  "model": "users.user",
+  "pk": 17,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$jWqAK5Wjfnc3rTaJzmBVvM$BD9pSMBaU6zRRLrrMiT9pSa13qCMkEaUHsMcia3QAMU=",
+    "last_login": "2025-07-13T11:54:18.335Z",
+    "is_superuser": false,
+    "username": "Alexey",
+    "first_name": "Алексей",
+    "last_name": "Ковалевский",
+    "email": "lelya.kovalevskiy@list.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-07-12T17:55:13.778Z",
+    "email_verified": true,
+    "verification_token": "c38bc4ed-851f-4244-89ce-6234ab9fefe4",
+    "photo": "profile/anonim.png",
+    "date_birth": null,
+    "description": "",
+    "slug": "alexey",
+    "groups": [],
+    "user_permissions": [
+      78
+    ]
+  }
+},
+{
+  "model": "users.user",
+  "pk": 19,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$GpLQduCR9apuCv79PyPV4Z$pl5qlqEmUjIJ/7CZ/FQrBkfQDNTFnb7wHapvuNzg03s=",
+    "last_login": "2025-07-15T21:16:51.578Z",
+    "is_superuser": false,
+    "username": "newuser3",
+    "first_name": "Алексей",
+    "last_name": "Ковалевский",
+    "email": "lelyakovalevskiy@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-07-15T20:47:01.083Z",
+    "email_verified": true,
+    "verification_token": "0c10535f-280c-424b-b9b5-a50c96712533",
+    "photo": "profile/anonim.png",
+    "date_birth": null,
+    "description": "",
+    "slug": "newuser3",
+    "groups": [],
+    "user_permissions": [
+      78
+    ]
+  }
+},
+{
+  "model": "users.user",
+  "pk": 22,
+  "fields": {
+    "password": "!7JfL0mava7S5gB8zquhC3RhEvByhi5mMFV8kpx97",
+    "last_login": "2025-07-30T19:42:08.288Z",
+    "is_superuser": false,
+    "username": "Lesha02",
+    "first_name": "Alexey",
+    "last_name": "Kovalevskiy",
+    "email": "lelya.kovalevskiy@list.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-07-16T17:06:41.909Z",
+    "email_verified": false,
+    "verification_token": "46499efb-4048-4495-a6a9-f005e8573fa9",
+    "photo": "profile/2025/07/16/aizen_I4mkvGR.png",
+    "date_birth": "2002-05-24",
+    "description": "",
+    "slug": "lesha02",
+    "groups": [
+      2
+    ],
+    "user_permissions": [
+      78
+    ]
+  }
+},
+{
+  "model": "users.user",
+  "pk": 33,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$eRsNNcdIctko8Bcx8wJQsS$6+K50tkmDFY6oTLD3KPyxr/P+66FdBMPX0XMzQULgp4=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Jonny",
+    "first_name": "Алексей",
+    "last_name": "Ковалевский",
+    "email": "lelya3.kovalevskiy@list.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-07-20T20:08:37.465Z",
+    "email_verified": false,
+    "verification_token": "9a0ddb96-d40e-4622-b00a-bfab540b5bdc",
+    "photo": "profile/anonim.png",
+    "date_birth": null,
+    "description": "",
+    "slug": "jonny",
+    "groups": [],
+    "user_permissions": [
+      78
+    ]
+  }
+},
+{
+  "model": "users.user",
+  "pk": 35,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$5JJw5OFUfJpySl8kuzlVtN$SdY+Vo5J0iEKNOCWTZGlDx7h5DgtFZK6oVPqo6v30qw=",
+    "last_login": "2025-08-09T21:46:36.926Z",
+    "is_superuser": false,
+    "username": "root",
+    "first_name": "Дядя",
+    "last_name": "Flint",
+    "email": "root@list.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-09T21:23:18.272Z",
+    "email_verified": true,
+    "verification_token": "81491730-989d-47c2-bf2f-f64f01fb3803",
+    "photo": "profile/2025/08/10/ae576de3f796c8b6e9f7e0921435a4a3.png",
+    "date_birth": "1925-01-01",
+    "description": "",
+    "slug": "root",
+    "groups": [],
+    "user_permissions": [
+      78
+    ]
+  }
+},
+{
+  "model": "users.user",
+  "pk": 36,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$IELQr4TrlAZAB74GYWfvHW$MbQIfQfWUs3YZiu/9VRnWXJKrWskcm5na4jRqjkQLEs=",
+    "last_login": "2025-08-22T14:45:46.980Z",
+    "is_superuser": false,
+    "username": "root3",
+    "first_name": "Дядя",
+    "last_name": "Flint",
+    "email": "root3@list.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-16T23:33:17Z",
+    "email_verified": true,
+    "verification_token": "722a5951-9db2-47ef-96a8-70e70f2bd311",
+    "photo": "profile/anonim.png",
+    "date_birth": null,
+    "description": "",
+    "slug": "root3",
+    "groups": [],
+    "user_permissions": [
+      78,
+      42
+    ]
+  }
+},
+{
+  "model": "users.user",
+  "pk": 37,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$ZWrASRA9y01SZJkhENGKUm$4msq8NMC2DpZAijLA02Ryle1OyA6oAhFs3zyrpYs8vY=",
+    "last_login": "2025-08-16T23:53:38.772Z",
+    "is_superuser": false,
+    "username": "qwer",
+    "first_name": "Дядя",
+    "last_name": "Джонсон",
+    "email": "lelya23.kovalevskiy@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-16T23:52:42.675Z",
+    "email_verified": true,
+    "verification_token": "ae1a3348-e427-4edd-8e9f-191050dd2dac",
+    "photo": "profile/anonim.png",
+    "date_birth": null,
+    "description": "",
+    "slug": "qwer",
+    "groups": [],
+    "user_permissions": [
+      78
+    ]
+  }
+},
+{
+  "model": "users.user",
+  "pk": 38,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$vX7uwNUvLmttHZfOcOR7GI$qD/ykvUSOZ3FnjPJL7o5YZwM/sNljVWhlWRbcr2H8so=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "new",
+    "first_name": "Дядя",
+    "last_name": "Джонсон",
+    "email": "new@list.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-17T16:59:08.076Z",
+    "email_verified": false,
+    "verification_token": "81c2048c-7ba4-410a-a854-cdab2670dad1",
+    "photo": "profile/anonim.png",
+    "date_birth": null,
+    "description": "",
+    "slug": "new",
+    "groups": [],
+    "user_permissions": [
+      78
+    ]
+  }
+}
+]

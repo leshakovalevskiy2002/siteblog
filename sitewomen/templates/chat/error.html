@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block content %}
+  <p class="text-info">{{ message }}</p>
+  <a class="text-decoration-none" href="{% url 'chat_home' %}">{% trans "Return to chats" %}</a>
+{% endblock %}

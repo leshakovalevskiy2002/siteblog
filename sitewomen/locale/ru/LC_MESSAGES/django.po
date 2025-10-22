@@ -1,0 +1,174 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-17 16:48+0300\n"
+"PO-Revision-Date: 2025-10-02 14:45+0300\n"
+"Last-Translator: lelya1 Kovalevskiy <lelya1.kovalevskiy@list.ru>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Translated-Using: django-rosetta 0.9.9\n"
+
+#: .\services\mixins.py:13
+msgid "Only the author can edit or delete this post!"
+msgstr "Только автор может редактировать или удалять эту запись!"
+
+#: .\sitewomen\admin.py:5
+msgid "Admin Panel"
+msgstr "Панель администрирования"
+
+#: .\sitewomen\admin.py:6
+msgid "Famous Women of the World"
+msgstr "Известные женщины мира"
+
+#: .\sitewomen\context_processors.py:4
+msgid "About the site"
+msgstr "О сайте"
+
+#: .\sitewomen\context_processors.py:5
+msgid "Add article"
+msgstr "Добавить статью"
+
+#: .\sitewomen\context_processors.py:6
+msgid "Contact"
+msgstr "Обратная связь"
+
+#: .\sitewomen\context_processors.py:7
+msgid "Login"
+msgstr "Войти"
+
+#: .\sitewomen\context_processors.py:7
+msgid "Register"
+msgstr "Регистрация"
+
+#: .\sitewomen\context_processors.py:12
+msgid "Logout"
+msgstr "Выйти"
+
+#: .\sitewomen\settings.py:190
+msgid "English"
+msgstr "Английский"
+
+#: .\sitewomen\settings.py:191
+msgid "Russian"
+msgstr "Русский"
+
+#: .\sitewomen\settings.py:192
+msgid "Belarusian"
+msgstr "Белорусский"
+
+#: .\sitewomen\urls.py:58
+msgid "users/"
+msgstr "пользователи/"
+
+#: .\sitewomen\urls.py:59
+msgid "feeds/latest/"
+msgstr "лента/последние/"
+
+#: .\sitewomen\urls.py:60
+msgid "chat/"
+msgstr "чат/"
+
+#: .\templates\base.html:50
+msgid "Search..."
+msgstr "Поиск..."
+
+#: .\templates\base.html:51
+msgid "Search"
+msgstr "Поиск"
+
+#: .\templates\base.html:124
+msgid ""
+"Partial or full reproduction of content from this site for distribution on "
+"other platforms, including print, is strictly prohibited."
+msgstr ""
+"Частичное или полное копирование информации с данного сайта для "
+"распространения на других ресурсах, в том числе и бумажных, строго запрещено."
+
+#: .\templates\chat\error.html:6
+msgid "Return to chats"
+msgstr "Вернуться к чатам"
+
+#: .\templates\chat\groupchat.html:9
+msgid "Send"
+msgstr "Отправить"
+
+#: .\templates\chat\groupchat.html:18
+msgid "Group Members"
+msgstr "Участники группы"
+
+#: .\templates\chat\home.html:7
+msgid "Existing chats"
+msgstr "Существующие чаты"
+
+#: .\templates\chat\home.html:15 .\templates\chat\home.html:70
+msgid "Leave"
+msgstr "Покинуть"
+
+#: .\templates\chat\home.html:18 .\templates\chat\home.html:71
+msgid "Open"
+msgstr "Открыть"
+
+#: .\templates\chat\home.html:22 .\templates\chat\home.html:61
+msgid "Join"
+msgstr "Присоединиться"
+
+#: .\templates\errors\error_page.html:6
+msgid "Return to homepage"
+msgstr "Вернуться на главную"
+
+#: .\templates\errors\error_page.html:7
+msgid "Close"
+msgstr "Закрыть"
+
+#: .\templates\include\breadcrumbs.html:6
+#: .\templates\include\breadcrumbs.html:13
+msgid "Home"
+msgstr "Главная"
+
+#: .\templates\include\file_input.html:5
+msgid "Current value:"
+msgstr "На данный момент:"
+
+#: .\templates\include\file_input.html:8
+msgid "Clear"
+msgstr "Очистить"
+
+#: .\templates\sidebar.html:8 .\templates\sidebar.html:10
+msgid "All categories"
+msgstr "Все категории"
+
+#: .\templates\sidebar.html:15
+msgid "Open Chat"
+msgstr "Открыть чат"
+
+#: .\templates\sidebar.html:18
+msgid "Subscribe to RSS feed"
+msgstr "Подписаться на RSS ленту"
+
+#~ msgid "Our channel"
+#~ msgstr "Наш канал"
+
+#~ msgid "Chat Room"
+#~ msgstr "Чат-комната"
+
+#~ msgid "Chat Home Page"
+#~ msgstr "Главная страница чата"
+
+#~ msgid "My Django Chat Home Page"
+#~ msgstr "Моя домашняя страница чата Django"
+
+#~ msgid "daily"
+#~ msgstr "ежедневно"

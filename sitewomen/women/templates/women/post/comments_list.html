@@ -1,0 +1,46 @@
+{% load mptt_tags static i18n %}
+{% if post.comments.exists %}
+    <div class="nested-comments">
+    {% recursetree post.comments.all %}
+        {% if node.active %}
+        <ul id="comment-thread-{{ node.pk }}">
+            <li class="card border-0">
+                <div>
+                    <img class="rounded-circle" width="50" src="{{ node.author.thumbnail.url }}">
+                    <p class="m-0 text-dark d-inline-block">
+                        <span class="fw-bold"><a class="text-decoration-none" href="{{ node.author.get_absolute_url }}">{{ node.author.username }}</a></span>
+                        <span class="text-secondary">{{ node.updated|timesince }} {% trans "ago" %}</span>
+                    </p>
+                        {% if node.parent_id is None %}
+                            {% include 'women/includes/comment_edit.html' with comment=node %}
+                        {% else %}
+                            {% include 'women/includes/comment_edit.html' with comment=node reply=True %}
+                        {% endif %}
+                </div>
+                {% if not node.is_leaf_node %}
+                    {{ children }}
+                {% endif %}
+            </li>
+        </ul>
+        {% endif %}
+    {% endrecursetree %}
+    </div>
+{% else %}
+    <span class="text-danger" id="delete-text">{% trans "No comments yet" %}</span>
+{% endif %}
+
+{% if request.user.is_authenticated %}
+        {% include 'women/includes/comment_form.html' %}
+{% else %}
+    <p class="mt-3">
+      <span class="bg-warning">
+        {% blocktrans with login_url=login_url %}
+            To write comments you need to <a href="{{ login_url }}">log in</a>
+        {% endblocktrans %}
+      </span>
+    </p>
+{% endif %}
+
+{% block script %}
+<script src="{% static 'comments.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% load static %}
+{% load i18n %}
+
+{% get_current_language as LANGUAGE_CODE %}
+
+<div class="rating-buttons mt-1" data-lang="{{ LANGUAGE_CODE }}">
+    {% if value is None %}
+    <img class="rating-button btn-1" width="30" data-post="{{ p.id }}" data-value="1"
+         src="{% static 'women/images/like.png' %}" alt="{% trans 'Like' %}">
+    <img class="rating-button btn-2" width="30" data-post="{{ p.id }}" data-value="-1"
+         src="{% static 'women/images/dislike.png' %}" alt="{% trans 'Dislike' %}">
+    {% elif value == 1 %}
+    <img class="rating-button btn-1" width="30" data-post="{{ p.id }}" data-value="1"
+         src="{% static 'women/images/like_click.png' %}" alt="{% trans 'Like' %}">
+    <img class="rating-button btn-2" width="30" data-post="{{ p.id }}" data-value="-1"
+         src="{% static 'women/images/dislike.png' %}" alt="{% trans 'Dislike' %}">
+    {% else %}
+    <img class="rating-button btn-1" width="30" data-post="{{ p.id }}" data-value="1"
+         src="{% static 'women/images/like.png' %}" alt="{% trans 'Like' %}">
+    <img class="rating-button btn-2" width="30" data-post="{{ p.id }}" data-value="-1"
+         src="{% static 'women/images/dislike_click.png' %}" alt="{% trans 'Dislike' %}">
+    {% endif %}
+    <span class="btn btn-sm btn-secondary rating-sum">{{ p.get_sum_rating }}</span>
+</div>

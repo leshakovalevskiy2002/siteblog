@@ -1,0 +1,57 @@
+name: sitewomen-dev
+
+services:
+  web:
+    build: ./sitewomen
+    container_name: web
+    image: web
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - 127.0.0.1:8000:8000
+    env_file:
+      - .env
+    volumes:
+      - ./sitewomen/media:/usr/src/app/sitewomen/media
+    depends_on:
+      - db
+      - memcached
+
+  db:
+    image: postgres:17
+    container_name: db
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    env_file:
+      - .env
+    environment:
+      - POSTGRES_USER=${SQL_USER}
+      - POSTGRES_PASSWORD=${SQL_PASSWORD}
+      - POSTGRES_DB=${SQL_DATABASE}
+
+  memcached:
+    image: memcached:1.6.21
+
+  redis:
+    image: redis:8.0.4
+    volumes:
+      - redis_data:/data
+
+  celery:
+    build: ./sitewomen
+    command: celery -A sitewomen worker --loglevel=info
+    env_file:
+      - .env
+    depends_on:
+      - redis
+
+  celerybeat:
+    build: ./sitewomen
+    command: celery -A sitewomen beat --loglevel=info
+    env_file:
+      - .env
+    depends_on:
+      - redis
+
+volumes:
+  postgres-data:
+  redis_data:

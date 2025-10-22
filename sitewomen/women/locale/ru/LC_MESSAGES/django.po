@@ -1,0 +1,731 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-17 18:31+0300\n"
+"PO-Revision-Date: 2025-10-12 22:54+0300\n"
+"Last-Translator: lelya1 Kovalevskiy <lelya.kovalevskiy@list.ru>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Translated-Using: django-rosetta 0.9.9\n"
+
+#: .\women\admin.py:13
+msgid "Sort by articles"
+msgstr "Сортировка по статьям"
+
+#: .\women\admin.py:18
+msgid "Short articles"
+msgstr "Короткие статьи"
+
+#: .\women\admin.py:19
+msgid "Medium articles"
+msgstr "Средние статьи"
+
+#: .\women\admin.py:20
+msgid "Long articles"
+msgstr "Большие статьи"
+
+#: .\women\admin.py:35
+msgid "Women's marital status"
+msgstr "Семейный статус женщин"
+
+#: .\women\admin.py:39
+msgid "Single"
+msgstr "Незамужняя"
+
+#: .\women\admin.py:40
+msgid "Married"
+msgstr "Замужем"
+
+#: .\women\admin.py:51
+msgid "Age groups"
+msgstr "Возрастные группы"
+
+#: .\women\admin.py:56
+msgid "Young age"
+msgstr "Молодой возраст"
+
+#: .\women\admin.py:57
+msgid "Middle age"
+msgstr "Средний возраст"
+
+#: .\women\admin.py:58
+msgid "Elderly age"
+msgstr "Пожилой возраст"
+
+#: .\women\admin.py:59
+msgid "Senile age"
+msgstr "Старческий возраст"
+
+#: .\women\admin.py:60
+msgid "Longevity"
+msgstr "Долголетие"
+
+#: .\women\admin.py:92
+msgid "Brief description"
+msgstr "Краткое описание"
+
+#: .\women\admin.py:96
+#, python-format
+msgid "Description of %(count)d character"
+msgid_plural "Description of %(count)d characters"
+msgstr[0] "Описание %(count)d символ"
+msgstr[1] "Описание %(count)d символа"
+msgstr[2] "Описание %(count)d символов"
+msgstr[3] "Описание %(count)d символов"
+
+#: .\women\admin.py:101
+msgid "Image"
+msgstr "Изображение"
+
+#: .\women\admin.py:105
+msgid "No photo"
+msgstr "Без фото"
+
+#: .\women\admin.py:107
+msgid "Publish selected entries"
+msgstr "Опубликовать выбранные записи"
+
+#: .\women\admin.py:111
+#, python-format
+msgid "%(count)d entry was updated"
+msgid_plural "%(count)d entries were updated"
+msgstr[0] "Обновлена %(count)d запись"
+msgstr[1] "Обновлены %(count)d записи"
+msgstr[2] "Обновлено %(count)d записей"
+msgstr[3] "Обновлено %(count)d записей"
+
+#: .\women\admin.py:117
+msgid "Mark selected entries as draft"
+msgstr "Сделать выбранные записи черновиком"
+
+#: .\women\admin.py:121
+#, python-format
+msgid "%(count)d entry was unpublished"
+msgid_plural "%(count)d entries were unpublished"
+msgstr[0] "Снята с публикации %(count)d запись"
+msgstr[1] "Сняты с публикации %(count)d записи"
+msgstr[2] "Снято с публикации %(count)d записей"
+msgstr[3] "Снято с публикации %(count)d записей"
+
+#: .\women\admin.py:141
+msgid "Number of women per category"
+msgstr "Количество женщин по категории"
+
+#: .\women\apps.py:6
+msgid "Famous Women of the World"
+msgstr "Известные женщины мира"
+
+#: .\women\feeds.py:9
+msgid "My Django Blog – Latest Posts"
+msgstr "Мой блог на Django — последние записи"
+
+#: .\women\feeds.py:10
+msgid "New posts on my website."
+msgstr "Новые записи на моем сайте."
+
+#: .\women\forms.py:9 .\women\models.py:46 .\women\models.py:160
+msgid "Status"
+msgstr "Статус"
+
+#: .\women\forms.py:25
+msgid "Title is required"
+msgstr "Без заголовка никак"
+
+#: .\women\forms.py:31
+msgid "Not married"
+msgstr "Не замужем"
+
+#: .\women\forms.py:32
+msgid "Select category"
+msgstr "Выберите категорию"
+
+#: .\women\forms.py:36
+msgid "Your name"
+msgstr "Ваше имя"
+
+#: .\women\forms.py:37
+msgid "Your email"
+msgstr "Ваш email"
+
+#: .\women\forms.py:40
+msgid "Your comment"
+msgstr "Ваш комментарий"
+
+#: .\women\forms.py:41
+msgid "Are you human?"
+msgstr "Вы не робот?"
+
+#: .\women\forms.py:47
+msgid "Enter your comment"
+msgstr "Введите ваш комментарий"
+
+#: .\women\forms.py:55
+msgid "Enter search query"
+msgstr "Введите поисковый запрос"
+
+#: .\women\forms.py:56
+msgid "Search..."
+msgstr "Поиск..."
+
+#: .\women\models.py:26
+msgid "Draft"
+msgstr "Черновик"
+
+#: .\women\models.py:27
+msgid "Published"
+msgstr "Опубликовано"
+
+#: .\women\models.py:29
+msgid "Title"
+msgstr "Заголовок"
+
+#: .\women\models.py:31
+msgid "The title is too short"
+msgstr "Заголовок слишком короткий"
+
+#: .\women\models.py:34 .\women\models.py:86 .\women\models.py:117
+msgid "Slug"
+msgstr "Слаг"
+
+#: .\women\models.py:36
+msgid "Photo"
+msgstr "Фото"
+
+#: .\women\models.py:43
+msgid "Content"
+msgstr "Текст статьи"
+
+#: .\women\models.py:44
+msgid "Time create"
+msgstr "Время создания"
+
+#: .\women\models.py:45
+msgid "Time update"
+msgstr "Время изменения"
+
+#: .\women\models.py:48 .\women\models.py:102
+msgid "Categories"
+msgstr "Категории"
+
+#: .\women\models.py:49 .\women\models.py:131
+#: .\women\templates\women\list_tags.html:5
+#: .\women\templates\women\post.html:29
+msgid "Tags"
+msgstr "Тэги"
+
+#: .\women\models.py:53
+msgid "Husband"
+msgstr "Муж"
+
+#: .\women\models.py:55 .\women\models.py:154
+#: .\women\templates\women\content.html:32
+msgid "Author"
+msgstr "Автор"
+
+#: .\women\models.py:64 .\women\models.py:65
+msgid "Famous women"
+msgstr "Известные женщины"
+
+#: .\women\models.py:85 .\women\models.py:101
+#: .\women\templates\women\content.html:28
+msgid "Category"
+msgstr "Категория"
+
+#: .\women\models.py:94
+msgid "Parent category"
+msgstr "Родительская категория"
+
+#: .\women\models.py:116 .\women\models.py:130
+msgid "Tag"
+msgstr "Тэг"
+
+#: .\women\models.py:134
+msgid "Name"
+msgstr "Имя мужчины"
+
+#: .\women\models.py:135
+msgid "Age"
+msgstr "Возраст"
+
+#: .\women\models.py:142
+msgid "Man"
+msgstr "Мужчина"
+
+#: .\women\models.py:143
+msgid "Men"
+msgstr "Мужчины"
+
+#: .\women\models.py:147
+msgid "Upload an image"
+msgstr "Загрузить изображение"
+
+#: .\women\models.py:152
+msgid "Title of the post"
+msgstr "Название поста"
+
+#: .\women\models.py:156
+msgid "Parent comment"
+msgstr "Родительский комментарий"
+
+#: .\women\models.py:157 .\women\models.py:167
+msgid "Comment"
+msgstr "Комментарий"
+
+#: .\women\models.py:158
+msgid "Date of create"
+msgstr "Дата создания"
+
+#: .\women\models.py:159
+msgid "Date of update"
+msgstr "Дата обновления"
+
+#: .\women\models.py:168
+msgid "Comments"
+msgstr "Комментарии"
+
+#: .\women\models.py:175
+#, python-format
+msgid "%(author)s commented on post %(post)s"
+msgstr "%(author)s прокомментировал пост %(post)s"
+
+#: .\women\models.py:182
+msgid "Post"
+msgstr "Пост"
+
+#: .\women\models.py:183
+msgid "User"
+msgstr "Пользователь"
+
+#: .\women\models.py:185
+msgid "Value"
+msgstr "Значение"
+
+#: .\women\models.py:185 .\women\templates\women\users_rating.html:9
+#: .\women\templates\women\users_rating.html:14
+#: .\women\templates\women\users_rating.html:19
+msgid "Like"
+msgstr "Нравится"
+
+#: .\women\models.py:185 .\women\templates\women\users_rating.html:11
+#: .\women\templates\women\users_rating.html:16
+#: .\women\templates\women\users_rating.html:21
+msgid "Dislike"
+msgstr "Не нравится"
+
+#: .\women\models.py:186
+msgid "Time of create"
+msgstr "Время создания"
+
+#: .\women\models.py:187
+msgid "IP address"
+msgstr "IP-адрес"
+
+#: .\women\models.py:193
+msgid "Rating"
+msgstr "Рейтинг"
+
+#: .\women\models.py:194
+msgid "Ratings"
+msgstr "Рейтинги"
+
+#: .\women\templates\women\about.html:13
+msgid ""
+"\n"
+"        This blog is a place where every voice matters.\n"
+"        Here, you can not only read engaging posts but also create your own, "
+"share your thoughts,\n"
+"        debate, like, dislike, and simply be yourself. We have a live chat "
+"for real-time conversations,\n"
+"        and posts are neatly organized by topics and tags. Join us — be an "
+"author, a reader, a conversationalist.\n"
+"        Everyone is welcome!\n"
+"        "
+msgstr ""
+"\n"
+"Этот блог — место, где каждый голос важен. Здесь можно не только читать "
+"интересные посты, но и создавать свои, делиться мыслями, спорить, лайкать, "
+"дизлайкать и просто быть собой. У нас есть чат для живого общения, а посты "
+"удобно разбиты по темам и тегам. Присоединяйся — будь автором, читателем, "
+"собеседником. Мы рады каждому!"
+
+#: .\women\templates\women\addpage.html:25
+#: .\women\templates\women\contact.html:27
+#: .\women\templates\women\edit_page.html:29
+msgid "Submit"
+msgstr "Отправить"
+
+#: .\women\templates\women\contact.html:28
+msgid "Refresh captcha"
+msgstr "Обновить капчу"
+
+#: .\women\templates\women\content.html:10
+#, python-format
+msgid "Posts for your query \"%(query)s\""
+msgstr "Публикации по вашему запросу \\\"%(query)s\\\""
+
+#: .\women\templates\women\content.html:13
+#, python-format
+msgid ""
+"\n"
+"\t\t\t\tFound %(total_results)s result\n"
+"\t\t\t"
+msgid_plural ""
+"\n"
+"\t\t\t\tFound %(total_results)s results\n"
+"\t\t\t"
+msgstr[0] ""
+"\n"
+"Найден %(total_results)s результат"
+msgstr[1] ""
+"\n"
+"Найдено %(total_results)s результата"
+msgstr[2] ""
+"\n"
+"Найдено %(total_results)s результатов"
+msgstr[3] ""
+"\n"
+"Найдено %(total_results)s результатов"
+
+#: .\women\templates\women\content.html:32
+msgid "unknown"
+msgstr "неизвестно"
+
+#: .\women\templates\women\content.html:55
+msgid "Read post"
+msgstr "Читать"
+
+#: .\women\templates\women\content.html:59
+msgid "Edit post"
+msgstr "Редактировать"
+
+#: .\women\templates\women\content.html:64
+msgid "Delete post"
+msgstr "Удалить"
+
+#: .\women\templates\women\content.html:73
+msgid "Post tags"
+msgstr "Теги поста"
+
+#: .\women\templates\women\content.html:84
+msgid "No results for your query. Return to"
+msgstr "Нет результатов по вашему запросу. Вернуться к"
+
+#: .\women\templates\women\content.html:97
+msgid "viewing articles"
+msgstr "просмотру статей"
+
+#: .\women\templates\women\delete_post.html:7
+#, python-format
+msgid ""
+"\n"
+"        Are you sure you want to delete the post \"%(post_title)s\"?\n"
+"    "
+msgstr ""
+"\n"
+"Вы уверены, что хотите удалить пост «%(post_title)s»?"
+
+#: .\women\templates\women\delete_post.html:14
+msgid "Yes, delete"
+msgstr "Да, удалить"
+
+#: .\women\templates\women\delete_post.html:15
+msgid "Return to post"
+msgstr "Вернуться к посту"
+
+#: .\women\templates\women\includes\comment_edit.html:11
+msgid "Edited"
+msgstr "Отредактировано"
+
+#: .\women\templates\women\includes\comment_edit.html:11
+#: .\women\templates\women\post\comments_list.html:12
+msgid "ago"
+msgstr "назад"
+
+#: .\women\templates\women\includes\comment_edit.html:16 .\women\views.py:276
+msgid "Reply"
+msgstr "Ответить"
+
+#: .\women\templates\women\includes\comment_edit.html:21
+#: .\women\templates\women\post.html:50 .\women\views.py:277
+msgid "Edit"
+msgstr "Редактировать"
+
+#: .\women\templates\women\includes\comment_form.html:3
+msgid "Add a comment"
+msgstr "Добавить комментарий"
+
+#: .\women\templates\women\includes\comment_form.html:11
+msgid "Submit comment"
+msgstr "Отправить комментарий"
+
+#: .\women\templates\women\includes\nav.html:5
+msgid "Home"
+msgstr "Главная"
+
+#: .\women\templates\women\includes\nav.html:6 .\women\views.py:51
+msgid "About the site"
+msgstr "О сайте"
+
+#: .\women\templates\women\includes\nav.html:7
+msgid "Contact"
+msgstr "Контакты"
+
+#: .\women\templates\women\pagination.html:13
+msgid "Previous"
+msgstr "Предыдущая"
+
+#: .\women\templates\women\pagination.html:43
+msgid "Next"
+msgstr "Следующая"
+
+#: .\women\templates\women\post.html:15
+#, python-format
+msgid ""
+"\n"
+"                    Today the page was visited <span class=\"badge bg-"
+"primary\">%(page_count)s</span> time\n"
+"                "
+msgid_plural ""
+"\n"
+"                    Today the page was visited <span class=\"badge bg-"
+"primary\">%(page_count)s</span> times\n"
+"                "
+msgstr[0] ""
+"\n"
+"Сегодня страница была посещена <span class=\"badge bg-"
+"primary\">%(page_count)s</span> раз"
+msgstr[1] ""
+"\n"
+"Сегодня страница была посещена <span class=\"badge bg-"
+"primary\">%(page_count)s</span> раза"
+msgstr[2] ""
+"\n"
+"Сегодня страница была посещена <span class=\"badge bg-"
+"primary\">%(page_count)s</span> раз"
+msgstr[3] ""
+"\n"
+"Сегодня страница была посещена <span class=\"badge bg-"
+"primary\">%(page_count)s</span> раз"
+
+#: .\women\templates\women\post.html:53
+msgid "Similar posts"
+msgstr "Похожие статьи"
+
+#: .\women\templates\women\post.html:61
+msgid "No similar posts."
+msgstr "Похожих постов нет."
+
+#: .\women\templates\women\post.html:66
+#, python-format
+msgid ""
+"\n"
+"                %(total)s comment\n"
+"            "
+msgid_plural ""
+"\n"
+"                %(total)s comments\n"
+"            "
+msgstr[0] ""
+"\n"
+"%(total)s комментарий"
+msgstr[1] ""
+"\n"
+"%(total)s комментария"
+msgstr[2] ""
+"\n"
+"%(total)s комментариев"
+msgstr[3] ""
+"\n"
+"%(total)s комментариев"
+
+#: .\women\templates\women\post\comment_edit.html:6
+msgid "Edit comment"
+msgstr "Редактировать комментарий"
+
+#: .\women\templates\women\post\comment_edit.html:25
+msgid "Update comment"
+msgstr "Обновить комментарий"
+
+#: .\women\templates\women\post\comment_edit.html:28
+msgid "To edit a comment you need to"
+msgstr "Чтобы отредактировать комментарий, нужно"
+
+#: .\women\templates\women\post\comment_edit.html:29
+msgid "log in"
+msgstr "войти"
+
+#: .\women\templates\women\post\comments_list.html:29
+msgid "No comments yet"
+msgstr "Комментариев пока нет"
+
+#: .\women\templates\women\post\comments_list.html:37
+#, python-format
+msgid ""
+"\n"
+"            To write comments you need to <a href=\"%(login_url)s\">log in</"
+"a>\n"
+"        "
+msgstr ""
+"\n"
+"Чтобы оставить комментарий, нужно <a href=\"%(login_url)s\">войти</a>"
+
+#: .\women\templates\women\search\form_search.html:11
+msgid "Search"
+msgstr "Поиск"
+
+#: .\women\urls.py:11
+msgid "about/"
+msgstr "о-сайте/"
+
+#: .\women\urls.py:12
+msgid "addpage/"
+msgstr "добавить/"
+
+#: .\women\urls.py:13
+msgid "contact/"
+msgstr "контакты/"
+
+#: .\women\urls.py:14
+msgid "post/<slug:post_slug>/"
+msgstr "пост/<slug:post_slug>/"
+
+#: .\women\urls.py:15
+msgid "category/<slug:cat_slug>/"
+msgstr "категория/<slug:cat_slug>/"
+
+#: .\women\urls.py:16
+msgid "tag/<slug:tag_slug>/"
+msgstr "тег/<slug:tag_slug>/"
+
+#: .\women\urls.py:17
+msgid "edit_post/<slug:slug>/"
+msgstr "редактировать/<slug:slug>/"
+
+#: .\women\urls.py:18
+msgid "delete_post/<slug:slug>/"
+msgstr "удалить/<slug:slug>/"
+
+#: .\women\validators.py:13
+msgid "Only Russian characters, hyphen, and space are allowed."
+msgstr "Должны присутствовать только русские символы, дефис и пробел."
+
+#: .\women\views.py:37
+msgid "Home page"
+msgstr "Главная"
+
+#: .\women\views.py:86
+msgid "Add article"
+msgstr "Добавить статью"
+
+#: .\women\views.py:87
+msgid "The post has been successfully added!"
+msgstr "Запись была успешно добавлена!"
+
+#: .\women\views.py:106
+msgid "Edit article"
+msgstr "Редактирование статьи"
+
+#: .\women\views.py:107
+msgid "The post has been successfully updated!"
+msgstr "Запись была успешно обновлена!"
+
+#: .\women\views.py:133
+msgid "Delete article"
+msgstr "Удаление статьи"
+
+#: .\women\views.py:143
+msgid "Feedback form"
+msgstr "Форма для обратной связи"
+
+#: .\women\views.py:151
+msgid "This is not your email address"
+msgstr "Это не ваш E-mail адрес"
+
+#: .\women\views.py:182
+#, python-format
+msgid "Category: %(name)s"
+msgstr "Рубрика: %(name)s"
+
+#: .\women\views.py:203
+#, python-format
+msgid "Tag - %(tag)s"
+msgstr "Тег - %(tag)s"
+
+#: .\women\views.py:209
+msgid "Unfortunately, this page was not found or has been moved"
+msgstr "К сожалению, эта страница не найдена или перемещена"
+
+#: .\women\views.py:211
+msgid "Page not found: 404"
+msgstr "Страница не найдена: 404"
+
+#: .\women\views.py:218
+msgid "Server error: 500"
+msgstr "Ошибка сервера: 500"
+
+#: .\women\views.py:219
+msgid ""
+"Internal server error. Please return to the home page. We will send a report "
+"to the site administration."
+msgstr ""
+"Внутренняя ошибка сайта. Вернитесь на главную страницу, отчёт об ошибке мы "
+"направим администрации сайта."
+
+#: .\women\views.py:225
+msgid "Access error: 403"
+msgstr "Ошибка доступа: 403"
+
+#: .\women\views.py:226
+msgid "Access to this page is restricted"
+msgstr "Доступ к этой странице ограничен"
+
+#: .\women\views.py:260
+#, python-format
+msgid "%(text)s ago"
+msgstr "%(text)s назад"
+
+#: .\women\views.py:270
+#, python-format
+msgid "%(count)d comment"
+msgid_plural "%(count)d comments"
+msgstr[0] "%(count)d комментарий"
+msgstr[1] "%(count)d комментария"
+msgstr[2] "%(count)d комментариев"
+msgstr[3] "%(count)d комментариев"
+
+#: .\women\views.py:275
+msgid "Updated"
+msgstr "Отредактировано"
+
+#: .\women\views.py:284
+msgid "You must be logged in to add comments"
+msgstr "Необходимо авторизоваться для добавления комментариев"
+
+#: .\women\views.py:302
+msgid "Comment successfully updated."
+msgstr "Комментарий успешно изменён."
+
+#~ msgid "edit_comment/<int:post_id>/<int:comment_id>/"
+#~ msgstr "редактировать-комментарий/<int:post_id>/<int:comment_id>/"
+
+#~ msgid "rating/"
+#~ msgstr "оценка/"
+
+#~ msgid "post/<slug:post_slug>/comments/create/"
+#~ msgstr "пост/<slug:post_slug>/комментарии/создать/"
+
+#~ msgid "monthly"
+#~ msgstr "ежемесячно"

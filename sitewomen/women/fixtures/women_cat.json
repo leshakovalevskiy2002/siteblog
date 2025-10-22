@@ -1,0 +1,24 @@
+[{
+  "model": "women.category",
+  "pk": 1,
+  "fields": {
+    "name": "Актрисы",
+    "slug": "aktrisy",
+    "parent": null,
+    "lft": 1,
+    "rght": 12,
+    "tree_id": 1,
+    "level": 0}
+},
+  {
+  "model": "women.category",
+  "pk": 2,
+  "fields": {
+    "name": "Певицы",
+    "slug": "pevicy",
+    "parent": null,
+    "lft": 1,
+    "rght": 12,
+    "tree_id": 1,
+    "level": 0}}
+]

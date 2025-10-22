@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block content %}
+    <h1>{{ title }}</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="invalid-feedback">
+            {% for error in form.non_field_errors %}
+                <p>{{ error }}</p>
+            {% endfor %}
+        </div>
+        {% for f in form %}
+        <div class="mb-3 row">
+            <label class="col-sm-2 col-form-label form-check-label" for="{{ f.id_for_label }}">{{ f.label_tag }}</label>
+            <div class="col col-10">
+                {{ f }}
+            </div>
+            <div class="invalid-feedback">
+                {% for error in f.errors %}
+                    <p class="mb-0">{{ error }}</p>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+        <p>
+            <button class="btn btn-success" type="submit">{% trans "Submit" %}</button>
+            <button class="btn btn-info js-captcha-refresh" type="button">{% trans "Refresh captcha" %}</button>
+        </p>
+    </form>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+$('.js-captcha-refresh').click(function(){
+    $form = $(this).parents('form');
+    $.getJSON("/captcha/refresh/", function (result) {
+        $('.captcha').attr('src', result['image_url']);
+        $('#id_captcha_0').val(result['key'])
+    });
+    return false;
+});
+</script>
+
+{% endblock %}

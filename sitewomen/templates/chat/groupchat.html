@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{{ title }}{% endblock title %}
+
+{% block content %}
+    <textarea class="form-control my-3" id="chat-log" rows="20"></textarea>
+    <input class="form-control mb-2" id="chat-message-input" type="text" size="100">
+    <input class="btn btn-primary mb-2" id="chat-message-submit" type="button" value='{% translate "Send" %}'>
+    <script>
+        document.querySelector('#chat-log').value = ""
+        {% for message_event in message_and_event_list %}
+            document.querySelector('#chat-log').value += "{{ message_event }}\n";
+            document.querySelector('#chat-log').scrollTop = 99999;
+        {% endfor %}
+    </script>
+
+    <h3>{% translate "Group Members" %}</h3>
+    <ul id="members" class="ps-0">
+    {% for member in group_members %}
+        <li class="list-unstyled mb-1" id="members-{{ member.username }}">
+            <a class="text-decoration-none" href="{% url 'users:show_profile' member.slug %}">
+            <img class="rounded" width="30" src="{{ member.thumbnail.url }}" alt="">
+            </a> {{ member }}
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock content %}
+
+{%block script%}
+
+<script>
+        const uuid = window.location.pathname.split("/")[4]
+        const chatSocket = new WebSocket(`ws://${window.location.host}/chat/groups/${uuid}/`);
+
+        chatSocket.onopen = function(e) {
+            console.log("connected")
+        };
+
+        chatSocket.onmessage = function (e) {
+            const data = JSON.parse(e.data);
+            console.log(data)
+            document.querySelector('#chat-log').value += (data.message + '\n');
+            document.querySelector('#chat-log').scrollTop = 99999;
+            status = data.status;
+            user = data.user;
+            url = data.url;
+            image = data.image;
+            if (status == "Left" ) {
+
+                document.getElementById(`members-${user}`).remove()
+            } else if (status == "Join" ) {
+                var members_list = document.getElementById('members')
+                var members_item = document.createElement("li")
+                members_item.innerHTML = `<a class="text-decoration-none"
+                    href="${url}"><img class="rounded" width="30"
+                     src="${image}" alt=""></a> ${user}`
+                members_item.setAttribute("id", `members-${user}`)
+                members_item.setAttribute("class", "list-unstyled mb-1")
+
+                console.log(members_item)
+                members_list.appendChild(members_item)
+            }
+        };
+
+        chatSocket.onclose = function (e) {
+            console.error('Chat socket closed unexpectedly');
+        };
+
+        document.querySelector('#chat-message-input').focus();
+        document.querySelector('#chat-message-input').onkeyup = function (e) {
+            if (e.keyCode === 13) {  // enter, return
+                document.querySelector('#chat-message-submit').click();
+            }
+        };
+
+        document.querySelector('#chat-message-submit').onclick = function (e) {
+            const messageInputDom = document.querySelector('#chat-message-input');
+            const message = messageInputDom.value;
+            chatSocket.send(JSON.stringify({
+                'type': 'text_message',
+                'author': '{{request.user}}',
+                'message': message
+            }));
+            messageInputDom.value = '';
+        };
+    </script>
+{% endblock script %}
