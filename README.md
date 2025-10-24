@@ -225,7 +225,7 @@ CREATE EXTENSION IF NOT EXISTS pg_trgm;
 For production:
 
 ```bash
-docker compose --env-file .env.prod -f docker-compose.prod.yml exec web python manage.py createsuperuser
+docker compose --env-file .env.prod -f docker-compose.prod.yml exec db psql --username=sitewomen --dbname=sitewomen
 ```
    
 ```sql
@@ -244,7 +244,7 @@ docker compose exec web python manage.py createsuperuser
 For production:
 
 ```bash
-docker compose --env-file .env.prod -f docker-compose.prod.yml exec db psql --username=sitewomen --dbname=sitewomen
+docker compose --env-file .env.prod -f docker-compose.prod.yml exec web python manage.py createsuperuser
 ```
 
 Once logged into the Django admin panel, you can:
