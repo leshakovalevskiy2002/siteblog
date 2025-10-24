@@ -30,7 +30,17 @@ RUN mkdir -p $APP_HOME \
     && useradd -r -g app app \
     && apt-get update && apt-get install -y libpq-dev postgresql-client\
     gettext \
+    locales \
     && rm -rf /var/lib/apt/lists/*
+
+RUN echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen && \
+    echo "ru_RU.UTF-8 UTF-8" >> /etc/locale.gen && \
+    echo "be_BY.UTF-8 UTF-8" >> /etc/locale.gen && \
+    locale-gen && \
+    update-locale LANG=en_US.UTF-8
+
+ENV LANG=en_US.UTF-8
+ENV LC_ALL=en_US.UTF-8
 
 COPY --from=builder /usr/src/app/wheels /wheels
 RUN pip install --no-cache-dir /wheels/*
