@@ -37,8 +37,11 @@ RUN pip install --no-cache-dir /wheels/*
 
 WORKDIR $APP_HOME
 COPY . .
+
+RUN sed -i 's/\r$//' entrypoint.prod.sh && \
+    chmod +x entrypoint.prod.sh
+
 RUN chown -R app:app .
 USER app
 
-RUN chmod +x entrypoint.prod.sh
 ENTRYPOINT ["./entrypoint.prod.sh"]
