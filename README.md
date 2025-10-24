@@ -63,120 +63,120 @@ Users can subscribe to the RSS feed.
 
 1. **Clone the repository:**
 
-   ```bash
-   git clone https://github.com/leshakovalevskiy2002/siteblog.git
-   cd siteblog
-   ```
+```bash
+git clone https://github.com/leshakovalevskiy2002/siteblog.git
+cd siteblog
+```
 
 2. **Download the `lid.176.bin` language identification model from FastText**:
 
-   You can find it on the [FastText language identification page](https://fasttext.cc/docs/en/language-identification.html).
+You can find it on the [FastText language identification page](https://fasttext.cc/docs/en/language-identification.html).
 
 3. **Create a folder named `fasttext_models` inside the `sitewomen` directory
 and place the downloaded `lid.176.bin` file there.**
 
-   ```bash
-   cd sitewomen
-   mkdir fasttext_models
-   mv /path/to/lid.176.bin fasttext_models/
-   ```
+ ```bash
+cd sitewomen
+mkdir fasttext_models
+mv /path/to/lid.176.bin fasttext_models/
+```
 
 4. **Create `.env` and `.env.prod` files:**
 
-   ```bash
-   cd ..
-   touch .env .env.prod
-   ```
+```bash
+cd ..
+touch .env .env.prod
+```
 
 Example `.env` content (adjust to your environment):
 
 ```env
-   SECRET_KEY =
-   DEBUG = True
-   DJANGO_ALLOWED_HOSTS ="127.0.0.1 localhost"
-   INTERNAL_IPS = '127.0.0.1'
-   CSRF_TRUSTED_ORIGINS='http://127.0.0.1'
+SECRET_KEY =
+DEBUG = True
+DJANGO_ALLOWED_HOSTS ="127.0.0.1 localhost"
+INTERNAL_IPS = '127.0.0.1'
+CSRF_TRUSTED_ORIGINS='http://127.0.0.1'
    
-   GITHUB_KEY =
-   GITHUB_SECRET =
+GITHUB_KEY =
+GITHUB_SECRET =
    
-   VK_KEY =
-   VK_SECRET =
+VK_KEY =
+VK_SECRET =
    
-   RECAPTCHA_PUBLIC_KEY =
-   RECAPTCHA_PRIVATE_KEY =
+RECAPTCHA_PUBLIC_KEY =
+RECAPTCHA_PRIVATE_KEY =
    
-   SQL_ENGINE=django.db.backends.postgresql
-   SQL_DATABASE=
-   SQL_USER=
-   SQL_PASSWORD=
-   SQL_HOST=db
-   SQL_PORT=5432
+SQL_ENGINE=django.db.backends.postgresql
+SQL_DATABASE=
+SQL_USER=
+SQL_PASSWORD=
+SQL_HOST=db
+SQL_PORT=5432
    
-   CACHES_BACKEND = 'django.core.cache.backends.memcached.PyMemcacheCache'
-   CACHES_LOCATION = 'memcached:11211'
+CACHES_BACKEND = 'django.core.cache.backends.memcached.PyMemcacheCache'
+CACHES_LOCATION = 'memcached:11211'
    
-   CHANNEL_LAYERS_BACKEND = "channels_redis.core.RedisChannelLayer"
-   CHANNEL_LAYERS_HOSTS = "redis://redis:6379/0"
+CHANNEL_LAYERS_BACKEND = "channels_redis.core.RedisChannelLayer"
+CHANNEL_LAYERS_HOSTS = "redis://redis:6379/0"
    
-   EMAIL_HOST_USER =
-   EMAIL_HOST_PASSWORD =
+EMAIL_HOST_USER =
+EMAIL_HOST_PASSWORD =
    
-   CELERY_REDIS_HOST = 'redis'
-   CELERY_REDIS_PORT = '6379'
+CELERY_REDIS_HOST = 'redis'
+CELERY_REDIS_PORT = '6379'
 ```
 
 Example `.env.prod` content (adjust to your environment):
 
 ```env
-   SECRET_KEY =
-   DEBUG = False
-   DJANGO_ALLOWED_HOSTS =
-   INTERNAL_IPS =
-   CSRF_TRUSTED_ORIGINS=
+SECRET_KEY =
+DEBUG = False
+DJANGO_ALLOWED_HOSTS =
+INTERNAL_IPS =
+CSRF_TRUSTED_ORIGINS=
    
-   GITHUB_KEY =
-   GITHUB_SECRET =
+GITHUB_KEY =
+GITHUB_SECRET =
    
-   VK_KEY =
-   VK_SECRET =
+VK_KEY =
+VK_SECRET =
    
-   RECAPTCHA_PUBLIC_KEY =
-   RECAPTCHA_PRIVATE_KEY =
+RECAPTCHA_PUBLIC_KEY =
+RECAPTCHA_PRIVATE_KEY =
    
-   SQL_ENGINE=django.db.backends.postgresql
-   SQL_DATABASE=
-   SQL_USER=
-   SQL_PASSWORD=
-   SQL_HOST=db
-   SQL_PORT=5432
-   DATABASE=postgres
+SQL_ENGINE=django.db.backends.postgresql
+SQL_DATABASE=
+SQL_USER=
+SQL_PASSWORD=
+SQL_HOST=db
+SQL_PORT=5432
+DATABASE=postgres
    
-   CACHES_BACKEND = 'django.core.cache.backends.memcached.PyMemcacheCache'
-   CACHES_LOCATION = 'memcached:11211'
+CACHES_BACKEND = 'django.core.cache.backends.memcached.PyMemcacheCache'
+CACHES_LOCATION = 'memcached:11211'
    
-   CHANNEL_LAYERS_BACKEND = "channels_redis.core.RedisChannelLayer"
-   CHANNEL_LAYERS_HOSTS = "redis://redis:6379/0"
+CHANNEL_LAYERS_BACKEND = "channels_redis.core.RedisChannelLayer"
+CHANNEL_LAYERS_HOSTS = "redis://redis:6379/0"
    
-   EMAIL_HOST_USER =
-   EMAIL_HOST_PASSWORD =
+EMAIL_HOST_USER =
+EMAIL_HOST_PASSWORD =
    
-   CELERY_REDIS_HOST = 'redis'
-   CELERY_REDIS_PORT = '6379'
+CELERY_REDIS_HOST = 'redis'
+CELERY_REDIS_PORT = '6379'
 ```
 
 5. **Run the project using Docker**
 
 For testing or local development:
 
-   ```bash
-      docker compose up -d --build
-   ```
+```bash
+docker compose up -d --build
+```
 
 For production:
 
 ```bash
-     docker compose --env-file .env.prod -f docker-compose.prod.yml up -d --build
+docker compose --env-file .env.prod -f docker-compose.prod.yml up -d --build
 ```
 
 6. **Apply migrations and collect static files**
@@ -184,65 +184,67 @@ For production:
 For testing or local development:
 
 ```bash
-   docker-compose exec web python manage.py migrate --noinput
-   docker-compose exec web python manage.py collectstatic --noinput
+docker-compose exec web python manage.py migrate --noinput
+docker-compose exec web python manage.py collectstatic --noinput
 ```
 
 For production:
 
 ```bash
-     docker compose --env-file .env.prod -f docker-compose.prod.yml exec web python manage.py migrate --noinput
-     docker compose --env-file .env.prod -f docker-compose.prod.yml exec web python manage.py collectstatic --noinput
+docker compose --env-file .env.prod -f docker-compose.prod.yml exec web python manage.py migrate --noinput
+docker compose --env-file .env.prod -f docker-compose.prod.yml exec web python manage.py collectstatic --noinput
 ```
 
 7. **Compile translation files:**
 
 For testing or local development:
 
-   ```bash
-      docker-compose exec web python manage.py compilemessages
-   ```
+```bash
+docker-compose exec web python manage.py compilemessages
+```
 
 For production:
 
-   ```bash
-        docker-compose --env-file .env.prod -f docker-compose.prod.yml exec web python manage.py compilemessages
-   ```
+```bash
+docker-compose --env-file .env.prod -f docker-compose.prod.yml exec web python manage.py compilemessages
+```
 
 8. **Enable trigram search extension:**
 
 For testing or local development:
 
 ```bash
-     docker compose exec db psql --username=sitewomen --dbname=sitewomen
+docker compose exec db psql --username=sitewomen --dbname=sitewomen
 ```
    
-   ```sql
-     CREATE EXTENSION IF NOT EXISTS pg_trgm;
-   ```
+```sql
+CREATE EXTENSION IF NOT EXISTS pg_trgm;
+\q
+```
 
 For production:
 
-   ```bash
-        docker compose --env-file .env.prod -f docker-compose.prod.yml exec web python manage.py createsuperuser
-   ```
+```bash
+docker compose --env-file .env.prod -f docker-compose.prod.yml exec web python manage.py createsuperuser
+```
    
-   ```sql
-   CREATE EXTENSION IF NOT EXISTS pg_trgm;
-   ```
+```sql
+CREATE EXTENSION IF NOT EXISTS pg_trgm;
+\q
+```
 
 9. **Create a superuser:**
 
 For testing or local development:
 
-   ```bash
-      docker compose exec web python manage.py createsuperuser
-   ```
+```bash
+docker compose exec web python manage.py createsuperuser
+```
 
 For production:
 
 ```bash
-     docker compose --env-file .env.prod -f docker-compose.prod.yml exec db psql --username=sitewomen --dbname=sitewomen
+docker compose --env-file .env.prod -f docker-compose.prod.yml exec db psql --username=sitewomen --dbname=sitewomen
 ```
 
 Once logged into the Django admin panel, you can:
@@ -255,9 +257,9 @@ Once logged into the Django admin panel, you can:
 
 To run the test suite and verify that everything is working correctly:
 
-   ```bash
-     docker compose exec web python manage.py test
-   ```
+```bash
+docker compose exec web python manage.py test
+```
 
 ## 🗂️ Project Structure
 
