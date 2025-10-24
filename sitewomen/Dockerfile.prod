@@ -29,6 +29,7 @@ RUN mkdir -p $APP_HOME \
     && groupadd -r app \
     && useradd -r -g app app \
     && apt-get update && apt-get install -y libpq-dev postgresql-client\
+    gettext \
     && rm -rf /var/lib/apt/lists/*
 
 COPY --from=builder /usr/src/app/wheels /wheels
