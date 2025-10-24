@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     cmake \
     python3-dev \
-    curl \ gettext
+    curl gettext \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip install --upgrade pip setuptools wheel
